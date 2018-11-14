@@ -1,0 +1,30 @@
+﻿@using FamilyTree.Models
+@model FamilyTree.Models.PersonModelList
+
+@{
+    ViewBag.Title = "Your Family";
+}
+
+<h4>Form to add a Fmaily Member</h4>
+
+
+@{
+    foreach (var item in Model.PersonList)
+    {
+        @Html.ActionLink(item.FirstName, "Update")
+        <br />
+    }
+}
+
+<div class="row">
+    <div class="col-lg-2">
+        @Html.ActionLink("Update your Family", "Update", null, new { @class = "btn btn-large btn-primary" })
+
+    </div>
+
+    <br />
+    <br />
+    <h2>Current Family Member Name:            @Model.CurrentPerson.FirstName @Model.CurrentPerson.LastName</h2>
+    <h2>Current Family Member Birth Day:       @Model.CurrentPerson.DOB.Date</h2>
+    <h2>Current Family Member Relation to You: @Model.CurrentPerson.IsToMe</h2>
+</div>
