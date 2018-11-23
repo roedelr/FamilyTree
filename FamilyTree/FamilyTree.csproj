@@ -205,6 +205,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Family\Create.cshtml" />
     <Content Include="Views\Family\Delete.cshtml" />
+    <Content Include="Views\Family\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

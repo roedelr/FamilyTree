@@ -1,0 +1,62 @@
+﻿@using FamilyTree.Models
+@using FamilyTree.Models.Enums
+@model FamilyTree.Models.PersonModel
+
+@{
+    ViewBag.Title = "Person Detail";
+}
+
+
+<h2>Detail</h2>
+
+<fieldset>
+    <legend>Personal Info</legend>
+
+    <dir class="display-label">
+        @Html.LabelFor(model => model.FirstName)
+
+    </dir>
+    <div class="display-field">
+        
+    </div>
+    <dir class="display-label">
+        @Html.LabelFor(m => m.LastName)
+
+    </dir>
+    <div class="display-field">
+       
+
+    </div>
+    <dir class="display-label">
+        @Html.LabelFor(m => m.DOB)
+
+    </dir>
+    <div class="display-field">
+       
+
+    </div>
+    <dir class="display-label">
+        @Html.LabelFor(m => m.IsToMe)
+
+    </dir>
+    <div class="display-field">
+       
+
+    </div>
+
+
+
+    <br />
+    <br />
+    <!--
+    <h2>Current Family Member Name:            @Model.FirstName @Model.LastName</h2>
+    <h2>Current Family Member Birth Day:       @Model.DOB.Date</h2>
+    <h2>Current Family Member Relation to You: @Model.IsToMe</h2>
+    -->
+</fieldset>
+    <div>
+
+    @Html.ActionLink("Update", "Update", new { id = Model.FirstName }) |
+    @Html.ActionLink("Back to List", "Index")
+    </div>
+

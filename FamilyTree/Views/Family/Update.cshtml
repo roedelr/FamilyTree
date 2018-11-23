@@ -3,48 +3,57 @@
 @model FamilyTree.Models.PersonModel
 
 @{
-    ViewBag.Title = "Your Family";
+    ViewBag.Title = "Update Personal Info";
 }
 
-<h4>Form to add a Fmaily Member now</h4>
+
 
 <div class="row">
-    <div class="col-lg-2">
-       @using (Html.BeginForm())
+    
+        @using (Html.BeginForm())
         {
-         <div class="row">
-                @Html.LabelFor(m => m.FirstName)
-                @Html.EditorFor(m => m.FirstName)
+            @Html.ValidationSummary(true)
+            <fieldset>
+                <legend>Update Fmaily Member Info</legend>
+                <div class="row">
+                    @Html.LabelFor(m => m.FirstName)
+                    @Html.EditorFor(m => m.FirstName)
 
-         </div>
+                </div>
 
-         <div class="row">
-                @Html.LabelFor(m => m.LastName)
-                @Html.EditorFor(m => m.LastName)
-            </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.LastName)
+                    @Html.EditorFor(m => m.LastName)
+                </div>
 
 
-            <div class="row">
-                @Html.LabelFor(m => m.DOB)
-                @Html.EditorFor(m => m.DOB)
-            </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.DOB)
+                    @Html.EditorFor(m => m.DOB)
+                </div>
 
-            <div class="row">
-                @Html.LabelFor(m => m.IsToMe)
-                @Html.EnumDropDownListFor(m => m.IsToMe,"Select Relationship")
-            </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.IsToMe)
+                    @Html.EnumDropDownListFor(m => m.IsToMe, "Select Relationship")
+                </div>
 
-            <div class="row">
-                <br />
-                <input type="submit" value="Update" class="btn btn-default">
-            </div>
-
-            }
-        </div>
-
+                <div class="row">
+                    <br />
+                    <input type="submit" value="Update" class="btn btn-default">
+                </div>
+            </fieldset>
+        }
+ 
+    <!--  class="col-lg-2"
     <br />
     <br />
     <h2>Current Family Member Name:            @Model.FirstName @Model.LastName</h2>
     <h2>Current Family Member Birth Day:       @Model.DOB.Date</h2>
     <h2>Current Family Member Relation to You: @Model.IsToMe</h2>
+    -->
+</div>
+<br/>
+<br/>
+<div>
+    @Html.ActionLink("Back to List", "Index")
 </div>

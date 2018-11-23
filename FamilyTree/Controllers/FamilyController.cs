@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using FamilyTree.Backend;
 using FamilyTree.Models;
-
+using static FamilyTree.Models.PersonModelList;
 
 namespace FamilyTree.Controllers
 {
@@ -33,6 +33,51 @@ namespace FamilyTree.Controllers
             data.PersonList.Add(data.CurrentPerson);
 
             return View(data);
+        }
+
+        // GET: /Service/Create
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        //
+        // POST: /Service/Create
+
+        [HttpPost]
+        public ActionResult Create([Bind(Include =
+            "FirstName," +
+            "LastName," +
+            "DOB," +
+            "IsToMe," +
+            "")] PersonModel NextMember)
+        {
+            if (ModelState.IsValid)
+            {
+                var data = new PersonModelList
+                {
+                    CurrentPerson = new PersonModel()
+                };
+
+                data.PersonList.Add(NextMember);
+              
+                return RedirectToAction("Index");
+               
+            }
+
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Detail()
+        {
+            if (MyFamily == null)
+                MyFamily = new FamilyBackend();
+
+            var Rando = new PersonModel();
+
+            return View(Rando);
         }
 
         [HttpGet]
