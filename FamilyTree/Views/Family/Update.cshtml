@@ -17,53 +17,63 @@
             format: "dd/mm/yyyy"
         });
     });
+
 </script>
 
+<link href="~/Content/Site.css" rel="stylesheet" />
 
 
-<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <h3 class="text-on-pannel text-primary"><strong class="text-uppercase"> Update Fmaily Member Info </strong></h3>
+            <p>
 
-    @using (Html.BeginForm())
-    {
-        @Html.ValidationSummary(true)
-        <fieldset>
-            <legend>Update Fmaily Member Info</legend>
-            <div class="row">
-                @Html.LabelFor(m => m.FirstName)               
-                @Html.EditorFor(m => m.FirstName)
+                
+                    <div class="control-group">
+                        @using (Html.BeginForm())
+                        {
+                            @Html.ValidationSummary(true)
 
-            </div>
+                            <div class="editor-field">
+                                @Html.LabelFor(m => m.FirstName)
+                                @Html.EditorFor(m => m.FirstName)
 
-            <div class="row">
-                @Html.LabelFor(m => m.LastName)
-                @Html.EditorFor(m => m.LastName)
-            </div>
+                            </div>
+
+                            <div class="editor-field">
+                                @Html.LabelFor(m => m.LastName)
+                                @Html.EditorFor(m => m.LastName)
+                            </div>
 
 
-            <div class="row">
-                @Html.LabelFor(m => m.DOB)
-                @Html.EditorFor(m => m.DOB, new { htmlAttributes = new { @class = "form-control DOB" } })
-              
-             <!--  <input type="text" placeholder="click to show datepicker" id="DOB" style='width:200px;' />-->
+                            <div class="editor-field">
+                                @Html.LabelFor(m => m.DOB)
+                                @Html.EditorFor(m => m.DOB, new { htmlAttributes = new { @class = "form-control DOB" } })
 
-            </div>
+                                <!--  <input type="text" placeholder="click to show datepicker" id="DOB" style='width:200px;' />-->
 
-            <div class="row">
-                @Html.LabelFor(m => m.IsToMe)
-                @Html.EnumDropDownListFor(m => m.IsToMe, "Select Relationship")
-            </div>
+                            </div>
 
-            <div class="row">
+                            <div class="editor-field">
+                                @Html.LabelFor(m => m.IsToMe)
+                                @Html.EnumDropDownListFor(m => m.IsToMe, "Select Relationship")
+                            </div>
+
+                            <div class="editor-field">
+                                <br />
+                                <input type="submit" value="Update" class="btn btn-default">
+                            </div>
+                        }
+                    </div>
+
                 <br />
-                <input type="submit" value="Update" class="btn btn-default">
-            </div>
-        </fieldset>
-    }
+                <br />
+                <div>
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
 
-   
-</div>
-<br />
-<br />
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+            </p>
+        </div>
+    </div>
+  
+       
