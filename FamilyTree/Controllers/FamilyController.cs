@@ -12,27 +12,25 @@ namespace FamilyTree.Controllers
    
     public class FamilyController : Controller
     {
+
+        public static PersonModelList data = new PersonModelList()
+        {
+            CurrentPerson = new PersonModel()
+        };
         [HttpGet]
         public ActionResult Index()
         {
             if(MyFamily == null)
                 MyFamily = new FamilyBackend();
-
-            var person1 = new PersonModel();
-            person1.FirstName = "Mike";
-
-            var person2 = new PersonModel();
-            person2.FirstName = "Doug";
-
-           var data = new PersonModelList()
+         if(data ==null)
             {
-                CurrentPerson = new PersonModel()
-            };
+                var person1 = new PersonModel();
+                person1.FirstName = "Mike";
 
-            data.PersonList.Add(person1);
-            data.PersonList.Add(person2);
-            data.PersonList.Add(data.CurrentPerson);
-
+                data.PersonList.Add(person1);
+            }
+            
+       
             return View(data);
         }
 
@@ -55,30 +53,28 @@ namespace FamilyTree.Controllers
             "")] PersonModel NextMember)
         {
             if (ModelState.IsValid)
-            { 
-              
+            {
+
+                data.PersonList.Add(NextMember);
+
                 return RedirectToAction("Index");
                
             }
 
-            else return View();
+            return View();
         }
 
         [HttpGet]
-        public ActionResult Detail([Bind(Include =
-            "FirstName," +
-            "LastName," +
-            "DOB," +
-            "IsToMe," +
-            "")] PersonModel MyFamily)
+        public ActionResult Detail(string FirstName)
         {
-          
+
             if (MyFamily == null)
                 return View();
 
-            var Rando = new PersonModel();
+       
+            
 
-            return View(Rando);
+            return View();
         }
 
         [HttpGet]

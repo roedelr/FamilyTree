@@ -35,7 +35,19 @@ namespace FamilyTree.Backend
 
                 return true;
             }
+            public bool reMoveMember(PersonModel deleteMember)
+            {
+                MyFam.FMem.Remove(deleteMember);
 
+                return true;
+             }
+
+        public bool updateMember(PersonModel updateMember)
+        {
+           
+
+            return true;
+        }
         public FamilyModel MyFam;
     }
 }

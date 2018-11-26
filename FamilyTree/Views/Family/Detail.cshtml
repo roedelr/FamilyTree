@@ -13,14 +13,17 @@
     <legend>Personal Info</legend>
 
     <dir class="display-label">
-        @Html.LabelFor(model => model.FirstName)
+        
+        @Html.DisplayNameFor(model => model.FirstName)
+        @Html.DisplayFor(model => model.FirstName)
 
     </dir>
     <div class="display-field">
         
     </div>
     <dir class="display-label">
-        @Html.LabelFor(m => m.LastName)
+        @Html.DisplayNameFor(model=> model.LastName)
+        @Html.DisplayFor(model => model.LastName)
 
     </dir>
     <div class="display-field">
@@ -28,7 +31,8 @@
 
     </div>
     <dir class="display-label">
-        @Html.LabelFor(m => m.DOB)
+        @Html.DisplayNameFor(model => model.DOB)
+        @Html.DisplayFor(model => model.DOB)
 
     </dir>
     <div class="display-field">
@@ -36,7 +40,8 @@
 
     </div>
     <dir class="display-label">
-        @Html.LabelFor(m => m.IsToMe)
+        @Html.DisplayNameFor(model => model.IsToMe)
+        @Html.DisplayFor(model => model.IsToMe)
 
     </dir>
     <div class="display-field">
@@ -48,15 +53,11 @@
 
     <br />
     <br />
-    <!--
-    <h2>Current Family Member Name:            @Model.FirstName @Model.LastName</h2>
-    <h2>Current Family Member Birth Day:       @Model.DOB.Date</h2>
-    <h2>Current Family Member Relation to You: @Model.IsToMe</h2>
-    -->
+   
 </fieldset>
     <div>
 
-    @Html.ActionLink("Update", "Update", new { id = Model.FirstName }) |
+    @Html.ActionLink("Update", "Update") |
     @Html.ActionLink("Back to List", "Index")
     </div>
 

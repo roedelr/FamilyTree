@@ -35,13 +35,14 @@
     </tr>
   </thead>
     <tbody>
+  
     @foreach (var item in Model.PersonList)
     {
 
         <tr class="cellcolor">
             <td align="center">
 
-                @Html.ActionLink("Details", "Details", new { id = item.FirstName }) |
+                @Html.ActionLink("Detail", "Detail", null, new { id = item.FirstName }) |
                 @Html.ActionLink("Update", "Update", null, new { id = item.FirstName }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.FirstName })
             </td>
