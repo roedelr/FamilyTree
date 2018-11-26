@@ -42,7 +42,7 @@ namespace FamilyTree.Controllers
         }
 
         //
-        // POST: /Service/Create
+        // POST: /Family/Create
 
         [HttpPost]
         public ActionResult Create([Bind(Include =
@@ -129,10 +129,10 @@ namespace FamilyTree.Controllers
         }
 
         //
-        // POST: /Service/Delete/5
+        // POST: /Family/Delete/
 
         [HttpPost, ActionName("Delete")]
-        public ActionResult Delete([Bind(Include =
+        public ActionResult DeleteconFirm([Bind(Include =
             "FirstName," +
             "LastName," +
             "DOB," +
@@ -141,8 +141,8 @@ namespace FamilyTree.Controllers
         {
             data.CurrentPerson = data.PersonList.Find(model => model.FirstName == deletePerson.FirstName);
             data.PersonList.Remove(data.CurrentPerson);
-           
-            return RedirectToAction("Index",data);
+            
+            return RedirectToAction("Index");
         }
 
 

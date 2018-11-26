@@ -208,7 +208,6 @@
     <Content Include="Views\Family\Create.cshtml" />
     <Content Include="Views\Family\Delete.cshtml" />
     <Content Include="Views\Family\Detail.cshtml" />
-    <Content Include="Views\Family\Edit.cshtml" />
     <Content Include="Views\Shared\EditorTemplate\DateTime.cshtml" />
   </ItemGroup>
   <ItemGroup>

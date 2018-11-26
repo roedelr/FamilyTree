@@ -54,9 +54,11 @@
 
 </fieldset>
 <div>
-
-    <input type="submit" value="Delete" class="btn btn-default" > |
-    <br />
-    <br />
-    @Html.ActionLink("Back to List", "Index")
-</div>
+    @using (Html.BeginForm())
+    {
+        <input type="submit" value="Delete" class="btn btn-default">
+        <br />
+        <br />
+        @Html.ActionLink("Back to List", "Index")
+    }
+ </div>
