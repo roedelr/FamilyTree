@@ -1,7 +1,60 @@
-﻿
+﻿@using FamilyTree.Models
+@using FamilyTree.Models.Enums
+@model FamilyTree.Models.PersonModel
+
 @{
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
 
+<h2>Are you sure you want to delete this?</h2>
+
+<fieldset>
+    <legend>Personal Info</legend>
+
+    <dir class="display-label">
+
+        @Html.DisplayNameFor(model => model.FirstName)
+        @Html.DisplayFor(model => model.FirstName)
+
+    </dir>
+    <div class="display-field">
+
+    </div>
+    <dir class="display-label">
+        @Html.DisplayNameFor(model => model.LastName)
+        @Html.DisplayFor(model => model.LastName)
+
+    </dir>
+    <div class="display-field">
+
+
+    </div>
+    <dir class="display-label">
+        @Html.DisplayNameFor(model => model.DOB)
+        @Html.DisplayFor(model => model.DOB)
+
+    </dir>
+    <div class="display-field">
+
+
+    </div>
+    <dir class="display-label">
+        @Html.DisplayNameFor(model => model.IsToMe)
+        @Html.DisplayFor(model => model.IsToMe)
+
+    </dir>
+    <div class="display-field">
+
+
+    </div>
+
+    <br />
+    <br />
+
+</fieldset>
+<div>
+
+    <input type="submit" value="Delete" /> |
+    @Html.ActionLink("Back to List", "Index")
+</div>

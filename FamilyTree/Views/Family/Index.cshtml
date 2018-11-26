@@ -42,9 +42,9 @@
         <tr class="cellcolor">
             <td align="center">
 
-                @Html.ActionLink("Detail", "Detail", null, new { id = item.FirstName }) |
-                @Html.ActionLink("Update", "Update", null, new { id = item.FirstName }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.FirstName })
+                @Html.ActionLink("Detail", "Detail", new { FirstName = item.FirstName}) |
+                @Html.ActionLink("Update", "Update", new { FirstName = item.FirstName }) |
+                @Html.ActionLink("Delete", "Delete", new { FirstName= item.FirstName })
             </td>
             <td>
                 @item.FirstName

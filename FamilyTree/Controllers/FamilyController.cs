@@ -65,27 +65,34 @@ namespace FamilyTree.Controllers
         }
 
         [HttpGet]
-        public ActionResult Detail(string FirstName)
+        public ActionResult Detail(string FirstName=null)
         {
 
             if (MyFamily == null)
-                return View();
-
-       
-            
-
-            return View();
+                MyFamily = new FamilyBackend();
+            PersonModel person = new PersonModel();
+            person = data.PersonList.Find(model => model.FirstName == FirstName);
+            if (person == null)
+            {
+                return HttpNotFound();
+            }
+            return View(person);
         }
 
         [HttpGet]
-        public ActionResult Update()
+        public ActionResult Update(string FirstName=null)
         {
             if (MyFamily == null)
                 MyFamily = new FamilyBackend();
 
-            var Rando = new PersonModel();
+            PersonModel person = new PersonModel();
+            person = data.PersonList.Find(model=>model.FirstName==FirstName);
+            if (person == null)
+            {
+                return HttpNotFound();
+            }
 
-            return View(Rando);
+            return View(person);
         }
 
         [HttpPost]
@@ -94,12 +101,46 @@ namespace FamilyTree.Controllers
             "LastName," +
             "DOB," +
             "IsToMe," +
-            "")] PersonModel NextMember)
+            "")] PersonModel updateMember)
         {
-           
+            
+            data.CurrentPerson= data.PersonList.Find(model => model.FirstName == updateMember.FirstName);
+                
+            data.CurrentPerson.FirstName = updateMember.FirstName;
+            data.CurrentPerson.LastName = updateMember.LastName;
+            data.CurrentPerson.DOB = updateMember.DOB;
+            data.CurrentPerson.IsToMe = updateMember.IsToMe;
 
-            return View(NextMember);
+            return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult Delete(string FirstName=null)
+        {
+
+            if (MyFamily == null)
+                MyFamily = new FamilyBackend();
+            PersonModel person = new PersonModel();
+            person = data.PersonList.Single(model => model.FirstName == FirstName);
+            return View(person);
+        }
+
+        //
+        // POST: /Service/Delete/5
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult Delete([Bind(Include =
+            "FirstName," +
+            "LastName," +
+            "DOB," +
+            "IsToMe," +
+            "")] PersonModel deletePerson)
+        {
+            data.CurrentPerson = data.PersonList.Find(model => model.FirstName == deletePerson.FirstName);
+            data.PersonList.Remove(data.CurrentPerson);
+           
+            return RedirectToAction("Index");
+        }
+
 
         public FamilyBackend MyFamily;
     }
