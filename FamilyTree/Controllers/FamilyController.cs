@@ -121,6 +121,10 @@ namespace FamilyTree.Controllers
                 MyFamily = new FamilyBackend();
             PersonModel person = new PersonModel();
             person = data.PersonList.Single(model => model.FirstName == FirstName);
+            if (person == null)
+            {
+                return HttpNotFound();
+            }
             return View(person);
         }
 
@@ -138,7 +142,7 @@ namespace FamilyTree.Controllers
             data.CurrentPerson = data.PersonList.Find(model => model.FirstName == deletePerson.FirstName);
             data.PersonList.Remove(data.CurrentPerson);
            
-            return RedirectToAction("Index");
+            return RedirectToAction("Index",data);
         }
 
 
