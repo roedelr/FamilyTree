@@ -9,6 +9,7 @@ using static FamilyTree.Models.PersonModelList;
 
 namespace FamilyTree.Controllers
 {
+   
     public class FamilyController : Controller
     {
         [HttpGet]
@@ -23,7 +24,7 @@ namespace FamilyTree.Controllers
             var person2 = new PersonModel();
             person2.FirstName = "Doug";
 
-            var data = new PersonModelList
+           var data = new PersonModelList()
             {
                 CurrentPerson = new PersonModel()
             };
@@ -36,7 +37,7 @@ namespace FamilyTree.Controllers
         }
 
         // GET: /Service/Create
-
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
@@ -54,26 +55,26 @@ namespace FamilyTree.Controllers
             "")] PersonModel NextMember)
         {
             if (ModelState.IsValid)
-            {
-                var data = new PersonModelList
-                {
-                    CurrentPerson = new PersonModel()
-                };
-
-                data.PersonList.Add(NextMember);
+            { 
               
                 return RedirectToAction("Index");
                
             }
 
-            return View();
+            else return View();
         }
 
         [HttpGet]
-        public ActionResult Detail()
+        public ActionResult Detail([Bind(Include =
+            "FirstName," +
+            "LastName," +
+            "DOB," +
+            "IsToMe," +
+            "")] PersonModel MyFamily)
         {
+          
             if (MyFamily == null)
-                MyFamily = new FamilyBackend();
+                return View();
 
             var Rando = new PersonModel();
 
@@ -99,9 +100,9 @@ namespace FamilyTree.Controllers
             "IsToMe," +
             "")] PersonModel NextMember)
         {
-            PersonModel Update = NextMember;
+           
 
-            return View(Update);
+            return View(NextMember);
         }
 
         public FamilyBackend MyFamily;
