@@ -5,11 +5,10 @@
 @{
     ViewBag.Title = "Update Personal Info";
 }
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <link href="~/Content/datepicker.css" type="text/css" rel="stylesheet" />
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
 <script src="~/Scripts/bootstrap-datepicker.js"></script>
 
 <script type="text/javascript">
@@ -45,7 +44,7 @@
                 @Html.LabelFor(m => m.DOB)
                 @Html.EditorFor(m => m.DOB, new { htmlAttributes = new { @class = "form-control DOB" } })
               
-                <input type="text" placeholder="click to show datepicker" id="DOB" style='width:200px;' />
+             <!--  <input type="text" placeholder="click to show datepicker" id="DOB" style='width:200px;' />-->
 
             </div>
 
