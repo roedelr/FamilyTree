@@ -54,5 +54,17 @@ namespace FamilyTree.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
+        [TestMethod]
+        public void Conroller_FamilyController_Create_Default_Should_Pass()
+        {
+            //Arrange
+            FamilyController controller = new FamilyController();
+
+            //Act
+            ViewResult result = controller.Create() as ViewResult;
+
+            //Assert
+            Assert.IsNotNull(result);
+        }
     }
 }
