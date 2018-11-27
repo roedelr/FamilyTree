@@ -46,7 +46,7 @@ namespace FamilyTree.Tests.Controllers
             FamilyController controller = new FamilyController();
 
             var data = new PersonModel();
-
+           
             // Act
             ViewResult result = controller.Update(data) as ViewResult;
 
