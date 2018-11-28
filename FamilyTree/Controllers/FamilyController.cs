@@ -117,6 +117,7 @@ namespace FamilyTree.Controllers
         public ActionResult Delete(string FirstName=null)
         {
 
+
             if (MyFamily == null)
                 MyFamily = new FamilyBackend();
             PersonModel person = new PersonModel();

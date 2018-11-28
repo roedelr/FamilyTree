@@ -34,30 +34,34 @@
                         {
                             @Html.ValidationSummary(true)
 
-                            <div class="editor-field">
-                                @Html.LabelFor(m => m.FirstName)
-                                @Html.EditorFor(m => m.FirstName)
+                        <div class="editor-field">
+                            @Html.LabelFor(m => m.FirstName)
+                            @Html.EditorFor(m => m.FirstName)
+                            @Html.ValidationMessageFor(m => m.FirstName)
 
-                            </div>
+                        </div>
 
-                            <div class="editor-field">
-                                @Html.LabelFor(m => m.LastName)
-                                @Html.EditorFor(m => m.LastName)
-                            </div>
+                        <div class="editor-field">
+                            @Html.LabelFor(m => m.LastName)
+                            @Html.EditorFor(m => m.LastName)
+                            @Html.ValidationMessageFor(m => m.LastName)
+                        </div>
 
 
-                            <div class="editor-field">
-                                @Html.LabelFor(m => m.DOB)
-                                @Html.EditorFor(m => m.DOB)
+                        <div class="editor-field">
+                            @Html.LabelFor(m => m.DOB)
+                            @Html.EditorFor(m => m.DOB)
+                            @Html.ValidationMessageFor(m => m.DOB)
 
-                                <!--  <input type="text" placeholder="click to show datepicker" id="DOB" style='width:200px;' />-->
+                            <!--  <input type="text" placeholder="click to show datepicker" id="DOB" style='width:200px;' />-->
 
-                            </div>
+                        </div>
 
-                            <div class="editor-field">
-                                @Html.LabelFor(m => m.IsToMe)
-                                @Html.EnumDropDownListFor(m => m.IsToMe, "Select Relationship")
-                            </div>
+                        <div class="editor-field">
+                            @Html.LabelFor(m => m.IsToMe)
+                            @Html.EnumDropDownListFor(m => m.IsToMe, "Select Relationship")
+                            @Html.ValidationMessageFor(model => model.IsToMe)
+                        </div>
 
                             <div class="editor-field">
                                 <br />

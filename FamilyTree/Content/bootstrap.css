@@ -224,7 +224,7 @@ tr:nth-child(even) {
 }
 th {
     padding: 0;
-    background-color: #4CAF50;
+    background-color: #DC143C;
     color: white;
 }
 
@@ -1378,11 +1378,11 @@ mark,
   color: #777;
 }
 .text-primary {
-  color: #337ab7;
+  color: #B22222;
 }
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #286090;
+  color: #DC143C;
 }
 .text-success {
   color: #3c763d;
