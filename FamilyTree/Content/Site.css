@@ -6,7 +6,7 @@
     margin:0px 15px 15px 15px;
 }
 
-<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" >
     .navbar-brand,
     .navbar-custom .navbar-brand:hover,
     .navbar-custom .navbar-brand:focus {
@@ -55,6 +55,7 @@
         /* probably not needed anymore, but doesn't hurt */
         -o-object-fit: contain;
         object-fit: contain;
+        color: white;
     }
     .navbar-custom.navbar-brand {
         padding-top: -5px;
@@ -149,4 +150,8 @@ p.jumbotron-custom-text {
     font-size:70px;
     text-align:center;
     font-weight:bold;
+}
+
+a, a:hover {
+    color: white;
 }
