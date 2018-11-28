@@ -7,6 +7,8 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/Content/Site.css")
+    @Styles.Render("~/Content/datepicker")
+    @Scripts.Render("~/bundles/datePicker")
 </head>
 <body>
     <nav class="navbar navbar-custom" role="navigation" style="font-weight: bold;background-color: #333399;">
@@ -21,7 +23,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    @Html.ActionLink("KENWORTH", "Index", "Family", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("KENWORTH", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
