@@ -9,9 +9,6 @@ using FamilyTree.Models.Enums;
 
 namespace FamilyTree.Models
 {
-
-   
-
     public class PersonModel
     {
 
