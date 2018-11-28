@@ -28,21 +28,9 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                FamilyTree
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Family", "Index", "Family")</li>
-                                <li>@Html.ActionLink("Add Member", "Create", "Family")</li>
-                                <li class="divider"></li>
-                                <li class="disabled">>@Html.ActionLink("Update", "Update", "Family")</li>
-                            </ul>
-                        </li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-
+                        <li>@Html.ActionLink("View Family", "Index", "Family")</li>
+                        <li>@Html.ActionLink("Add Member", "Create", "Family")</li>
+                        <li class="disabled">@Html.ActionLink("Update Member", "Update", "Family")</li>
                     </ul>
                     
                         <ul class="nav navbar-nav navbar-right">
