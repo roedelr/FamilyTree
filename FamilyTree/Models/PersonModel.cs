@@ -9,9 +9,6 @@ using FamilyTree.Models.Enums;
 
 namespace FamilyTree.Models
 {
-
-   
-
     public class PersonModel
     {
 
@@ -25,6 +22,7 @@ namespace FamilyTree.Models
 
         [DisplayName("Date of Birth")]
         [Required(ErrorMessage = "Enter Date of Birth")]
+        [DataType(DataType.Date)]
         public DateTime DOB { get; set; }
 
         [DisplayName("Relationship to You")]

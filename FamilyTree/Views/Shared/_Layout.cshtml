@@ -7,6 +7,8 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/Content/Site.css")
+    @Styles.Render("~/Content/datepicker")
+    @Scripts.Render("~/bundles/datePicker")
 </head>
 <body>
     <nav class="navbar navbar-custom" role="navigation" style="font-weight: bold;background-color: #333399;">
@@ -28,7 +30,6 @@
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("View Family", "Index", "Family")</li>
                         <li>@Html.ActionLink("Add Member", "Create", "Family")</li>
-                        <li class="disabled">@Html.ActionLink("Update Member", "Update", "Family")</li>
                     </ul>
                     
                         <ul class="nav navbar-nav navbar-right">
