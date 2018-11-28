@@ -71,14 +71,15 @@
              padding-top:-5px;
         }
 .text-on-pannel {
-    background: #AA0000 none repeat scroll 0 0;
+    background: #f2f2f2 none repeat scroll 0 0;
     height: auto;
     margin-left: 20px;
-    padding: 3px 5px;
+    padding: 8px 5px;
     position: absolute;
-    margin-top: -47px;
+    margin-top: -57px;
     border: 1px solid #AA0000;
-    border-radius: 12px;
+    border-radius: 30px;
+    border-width:5px;
 }
 
 .panel {
@@ -134,7 +135,7 @@ tr:hover {
 
 th {
     font-family: Verdana,Arial,sans-serif;
-    background-color: #A52F2A;
+    background-color: #AA0000;
     color: #ffffff;
     padding: 0;
     
