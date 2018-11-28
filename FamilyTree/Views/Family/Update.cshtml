@@ -29,54 +29,61 @@
             <p>
 
                 
-                    <div class="control-group">
-                        @using (Html.BeginForm())
-                        {
-                            @Html.ValidationSummary(true)
+                <div class="control-group">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.ValidationSummary(true)
 
-                        <div class="editor-field">
+                        <div class="display-label">
                             @Html.LabelFor(m => m.FirstName)
+                        </div>
+                        <div class="editor-field">
                             @Html.EditorFor(m => m.FirstName)
                             @Html.ValidationMessageFor(m => m.FirstName)
 
                         </div>
-
-                        <div class="editor-field">
+                        <div class="display-label">
                             @Html.LabelFor(m => m.LastName)
+                        </div>
+                        <div class="editor-field">
                             @Html.EditorFor(m => m.LastName)
                             @Html.ValidationMessageFor(m => m.LastName)
                         </div>
-
+                        <div class="display-label">
+                            @Html.LabelFor(m => m.DOB)
+                        </div>
 
                         <div class="editor-field">
-                            @Html.LabelFor(m => m.DOB)
+                            
                             @Html.EditorFor(m => m.DOB)
                             @Html.ValidationMessageFor(m => m.DOB)
 
                             <!--  <input type="text" placeholder="click to show datepicker" id="DOB" style='width:200px;' />-->
 
                         </div>
-
-                        <div class="editor-field">
+                        <div class="display-label">
                             @Html.LabelFor(m => m.IsToMe)
+                        </div>
+                        <div class="editor-field">
+                          
                             @Html.EnumDropDownListFor(m => m.IsToMe, "Select Relationship")
                             @Html.ValidationMessageFor(model => model.IsToMe)
                         </div>
 
-                            <div class="editor-field">
-                                <br />
-                                <input type="submit" value="Update" class="btn btn-default">
-                            </div>
-                        }
-                    </div>
-
-                <br />
-                <br />
-                <div>
-                    @Html.ActionLink("Back to List", "Index")
+                        <div class="editor-field">
+                            <br />
+                            <input type="submit" value="Update" class="btn btn-default">
+                        </div>
+                    }
                 </div>
 
-            </p>
+                        <br />
+                        <br />
+                        <div>
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+
+</p>
         </div>
     </div>
   

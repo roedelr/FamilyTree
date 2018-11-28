@@ -9,56 +9,55 @@
 
 <h2>Are you sure you want to delete this?</h2>
 
-<fieldset>
-    <legend>Personal Info</legend>
+<div class="panel panel-default">
+    <div class="panel-body" style="color:black">
+        <h3 class="text-on-pannel text-muted"><strong class="text-uppercase">Personal Info </strong></h3>
+        <p></p>
 
-    <dir class="display-label">
+        <dir class="display-label">
 
-        @Html.DisplayNameFor(model => model.FirstName)
-        @Html.DisplayFor(model => model.FirstName)
+            @Html.DisplayNameFor(model => model.FirstName)
+            <em><strong>  @Html.DisplayFor(model => model.FirstName)</strong></em>
 
-    </dir>
-    <div class="display-field">
+        </dir>
+        <div class="display-field">
 
+        </div>
+        <dir class="display-label">
+            @Html.DisplayNameFor(model => model.LastName)
+            <em><strong> @Html.DisplayFor(model => model.LastName)</strong></em>
+
+        </dir>
+        <div class="display-field">
+
+        </div>
+        <dir class="display-label">
+            @Html.DisplayNameFor(model => model.DOB)
+            <em><strong>   @Html.DisplayFor(model => model.DOB)</strong></em>
+
+        </dir>
+        <div class="display-field">
+        </div>
+        <dir class="display-label">
+            @Html.DisplayNameFor(model => model.IsToMe)
+            <em><strong>   @Html.DisplayFor(model => model.IsToMe)</strong></em>
+
+        </dir>
+        <div class="display-field">
+
+        </div>
+       
+        <div>
+            @using (Html.BeginForm())
+            {
+                <input type="submit" value="Delete" class="btn btn-default">
+                <br />
+                <br />
+                @Html.ActionLink("Back to List", "Index")
+            }
+        </div>
+        <p></p>
     </div>
-    <dir class="display-label">
-        @Html.DisplayNameFor(model => model.LastName)
-        @Html.DisplayFor(model => model.LastName)
-
-    </dir>
-    <div class="display-field">
+</div>
 
 
-    </div>
-    <dir class="display-label">
-        @Html.DisplayNameFor(model => model.DOB)
-        @Html.DisplayFor(model => model.DOB)
-
-    </dir>
-    <div class="display-field">
-
-
-    </div>
-    <dir class="display-label">
-        @Html.DisplayNameFor(model => model.IsToMe)
-        @Html.DisplayFor(model => model.IsToMe)
-
-    </dir>
-    <div class="display-field">
-
-
-    </div>
-
-    <br />
-    <br />
-
-</fieldset>
-<div>
-    @using (Html.BeginForm())
-    {
-        <input type="submit" value="Delete" class="btn btn-default">
-        <br />
-        <br />
-        @Html.ActionLink("Back to List", "Index")
-    }
- </div>
