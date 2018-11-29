@@ -9,8 +9,12 @@ using FamilyTree.Models.Enums;
 
 namespace FamilyTree.Models
 {
+
+
+
     public class PersonModel
     {
+        public int ID;
 
         [DisplayName("First name")]
         [Required(ErrorMessage = "Enter Name")]

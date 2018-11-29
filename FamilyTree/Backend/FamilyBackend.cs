@@ -9,45 +9,55 @@ using FamilyTree.Models.Enums;
 
 namespace FamilyTree.Backend
 {
-    public class FamilyBackend 
+    public class FamilyBackend
     {
-            public FamilyBackend()
-            {
-                MyFam = new FamilyModel();
-            }
-
-            public bool setMe(string FirstName, string LastName, DateTime DOB)
-            {
-                foreach (PersonModel member in MyFam.FMem)
-                {
-                    if (member.IsToMe == RelationEnum.Self)
-                        return false;
-                }
-
-                MyFam.FMem.AddLast(value: new PersonModel(FirstName, LastName, DOB, RelationEnum.Self));
-
-                return true;
-            }
-
-            public bool addMember(PersonModel nextMember)
-            {
-                MyFam.FMem.AddLast(nextMember);
-
-                return true;
-            }
-            public bool reMoveMember(PersonModel deleteMember)
-            {
-                MyFam.FMem.Remove(deleteMember);
-
-                return true;
-             }
-
-        public bool updateMember(PersonModel updateMember)
+        public FamilyBackend()
         {
-           
+            MyFam = new PersonModelList();
+        }
+
+        public bool addMember(PersonModel NextMember)
+        {
+            if (MyFam.PersonList.IndexOf(NextMember) == -1)
+            {
+                NextMember.ID = getID();
+
+                MyFam.PersonList.Add(NextMember);
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool getMember(int ID)
+        {
+            MyFam.CurrentPerson = MyFam.PersonList.Find(model => model.ID == ID);
 
             return true;
         }
-        public FamilyModel MyFam;
+
+        public bool removeMember(PersonModel deleteMember)
+        {
+            MyFam.PersonList.Remove(MyFam.CurrentPerson);
+
+            return true;
+        }
+
+
+
+        public bool updateMember(PersonModel updateMember)
+        {
+            MyFam.CurrentPerson.FirstName = updateMember.FirstName;
+            MyFam.CurrentPerson.LastName = updateMember.LastName;
+            MyFam.CurrentPerson.DOB = updateMember.DOB;
+            MyFam.CurrentPerson.IsToMe = updateMember.IsToMe;
+
+            return true;
+        }
+
+        private int getID() { return MyFam.IDMaker++; }
+
+        public PersonModelList MyFam;
     }
 }

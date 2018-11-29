@@ -11,10 +11,13 @@ namespace FamilyTree.Models
 {
     public class PersonModelList
     {
+        public PersonModelList() { IDMaker = 0; }
+
+        public int IDMaker;
 
         public List<PersonModel> PersonList = new List<PersonModel>();
 
         public PersonModel CurrentPerson = new PersonModel();
-        
+
     }
 }
