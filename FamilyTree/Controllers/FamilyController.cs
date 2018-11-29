@@ -58,16 +58,11 @@ namespace FamilyTree.Controllers
         }
 
         [HttpGet]
-        public ActionResult Detail(string FirstName=null)
+        public ActionResult Detail(string FirstName=null, int ID = -1)
         {
-            PersonModel person = new PersonModel();
+            Family.getMember(ID);
 
-            person = data.PersonList.Find(model => model.FirstName == FirstName);
-            if (person == null)
-            {
-                return HttpNotFound();
-            }
-            return View(person);
+            return View(Family.MyFam.CurrentPerson);
         }
 
         [HttpGet]
