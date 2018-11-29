@@ -23,7 +23,7 @@ namespace FamilyTree.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(data);
+            return View(Family.MyFam);
         }
 
         // GET: /Service/Create
@@ -32,10 +32,8 @@ namespace FamilyTree.Controllers
         {
             return View();
         }
-
-        //
+        
         // POST: /Family/Create
-
         [HttpPost]
         public ActionResult Create([Bind(Include =
             "FirstName," +
@@ -48,17 +46,14 @@ namespace FamilyTree.Controllers
             {
                 Family.addMember(NextMember);
 
-                data.PersonList.Add(NextMember);
-
                 return RedirectToAction("Index");
-               
             }
 
             return View();
         }
 
         [HttpGet]
-        public ActionResult Detail(string FirstName=null, int ID = -1)
+        public ActionResult Detail(int ID)
         {
             Family.getMember(ID);
 
@@ -66,18 +61,10 @@ namespace FamilyTree.Controllers
         }
 
         [HttpGet]
-        public ActionResult Update(string FirstName = null, int ID = -1)
+        public ActionResult Update(int ID)
         {
             Family.getMember(ID);
-
-            PersonModel person = new PersonModel();
-
-            person = data.PersonList.Find(model=>model.FirstName==FirstName);
-            if (person == null)
-            {
-                return HttpNotFound();
-            }
-
+            
             return View(Family.MyFam.CurrentPerson);
         }
 
@@ -87,30 +74,18 @@ namespace FamilyTree.Controllers
             "LastName," +
             "DOB," +
             "IsToMe," +
-            "")] PersonModel updateMember)
+            "")] PersonModel UpdatedMember)
         {
-            
-            data.CurrentPerson= data.PersonList.Find(model => model.FirstName == updateMember.FirstName);
-                
-            data.CurrentPerson.FirstName = updateMember.FirstName;
-            data.CurrentPerson.LastName = updateMember.LastName;
-            data.CurrentPerson.DOB = updateMember.DOB;
-            data.CurrentPerson.IsToMe = updateMember.IsToMe;
+
+            Family.updateMember(UpdatedMember);
 
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult Delete(string FirstName = null, int ID = -1)
+        public ActionResult Delete(int ID)
         {
             Family.getMember(ID);
 
-            PersonModel person = new PersonModel();
-
-            person = data.PersonList.Single(model => model.FirstName == FirstName);
-            if (person == null)
-            {
-                return HttpNotFound();
-            }
             return View(Family.MyFam.CurrentPerson);
         }
 
@@ -125,8 +100,7 @@ namespace FamilyTree.Controllers
             "IsToMe," +
             "")] PersonModel deletePerson)
         {
-            data.CurrentPerson = data.PersonList.Find(model => model.FirstName == deletePerson.FirstName);
-            data.PersonList.Remove(data.CurrentPerson);
+            Family.removeMember();
             
             return RedirectToAction("Index");
         }
