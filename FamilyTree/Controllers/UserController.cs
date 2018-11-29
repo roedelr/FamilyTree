@@ -17,7 +17,7 @@ namespace FamilyTree.Controllers
             return View();
         }
 
-        // GET: /Service/SignIn
+        // GET: /User/SignIn
         [HttpGet]
         public ActionResult SignIn()
         {
