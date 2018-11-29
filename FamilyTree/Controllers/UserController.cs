@@ -35,11 +35,6 @@ namespace FamilyTree.Controllers
             "")] UserModel NextMember)
         {
 
-            if (NextMember == user)
-            {
-                return RedirectToAction("Family/Index");
-            }
-
             return View();
         }
     }

@@ -10,17 +10,17 @@ namespace FamilyTree.Models
 {
     public class UserModel
     {
-        [DisplayName("Username")]
+        [DisplayName("User Name")]
         [Required(ErrorMessage = "Enter a Username")]
         public string UserName { get; set; }
 
-        [DisplayName("Username")]
-        [Required(ErrorMessage = "Enter a Username")]
+        [DisplayName("User Email")]
+        [Required(ErrorMessage = "Enter a email")]
         [DataType(DataType.EmailAddress)]
         public string UserEmail { get; set; }
 
-        [DisplayName("Username")]
-        [Required(ErrorMessage = "Enter a Username")]
+        [DisplayName("User Password")]
+        [Required(ErrorMessage = "Enter a password")]
         public string UserPassword { get; set; }
 
         public UserModel()
