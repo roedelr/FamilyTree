@@ -30,12 +30,11 @@ namespace FamilyTree.Models
             UserPassword = "password123";
         }
 
-        public UserModel(string UserName, EmailAddressAttribute UserEmail, string UserPassword)
+        public UserModel(string UserName, string UserEmail, string UserPassword)
         {
             this.UserName = UserName;
             this.UserEmail = UserEmail;
-            this.DOB = DOB;
-            IsToMe = Relation;
+            this.UserPassword = UserPassword;
         }
     }
 }
