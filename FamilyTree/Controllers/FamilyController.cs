@@ -13,24 +13,16 @@ namespace FamilyTree.Controllers
     public class FamilyController : Controller
     {
 
+        public static FamilyBackend family = new FamilyBackend();
+
         public static PersonModelList data = new PersonModelList()
         {
             CurrentPerson = new PersonModel()
         };
+
         [HttpGet]
         public ActionResult Index()
         {
-            if(MyFamily == null)
-                MyFamily = new FamilyBackend();
-         if(data ==null)
-            {
-                var person1 = new PersonModel();
-                person1.FirstName = "Mike";
-
-                data.PersonList.Add(person1);
-            }
-            
-       
             return View(data);
         }
 
@@ -67,10 +59,8 @@ namespace FamilyTree.Controllers
         [HttpGet]
         public ActionResult Detail(string FirstName=null)
         {
-
-            if (MyFamily == null)
-                MyFamily = new FamilyBackend();
             PersonModel person = new PersonModel();
+
             person = data.PersonList.Find(model => model.FirstName == FirstName);
             if (person == null)
             {
@@ -82,10 +72,8 @@ namespace FamilyTree.Controllers
         [HttpGet]
         public ActionResult Update(string FirstName=null)
         {
-            if (MyFamily == null)
-                MyFamily = new FamilyBackend();
-
             PersonModel person = new PersonModel();
+
             person = data.PersonList.Find(model=>model.FirstName==FirstName);
             if (person == null)
             {
@@ -116,11 +104,8 @@ namespace FamilyTree.Controllers
         [HttpGet]
         public ActionResult Delete(string FirstName=null)
         {
-
-
-            if (MyFamily == null)
-                MyFamily = new FamilyBackend();
             PersonModel person = new PersonModel();
+
             person = data.PersonList.Single(model => model.FirstName == FirstName);
             if (person == null)
             {
@@ -145,8 +130,5 @@ namespace FamilyTree.Controllers
             
             return RedirectToAction("Index");
         }
-
-
-        public FamilyBackend MyFamily;
     }
 }
