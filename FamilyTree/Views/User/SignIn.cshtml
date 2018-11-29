@@ -1,0 +1,68 @@
+﻿@using FamilyTree.Models
+@using FamilyTree.Models.Enums
+@model FamilyTree.Models.UserModel
+@{
+    ViewBag.Title = "Sign In";
+    Layout = "~/Views/Family/SignIn.cshtml";
+}
+<link href="~/Content/Site.css" rel="stylesheet" />
+<h2>SignIn</h2>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h3 class="text-on-pannel text-muted"><strong class="text-uppercase"> Create Family Member Info </strong></h3>
+        <p></p>
+
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+
+
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.UserName)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.UserName)
+                @Html.ValidationMessageFor(model => model.FirstName)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.LastName)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.LastName)
+                @Html.ValidationMessageFor(model => model.LastName)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.DOB)
+            </div>
+            <div class="editor-field" type="date">
+                @Html.EditorFor(model => model.DOB)
+                @Html.ValidationMessageFor(model => model.DOB)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.IsToMe)
+            </div>
+
+            <div class="editor-field">
+                @Html.EnumDropDownListFor(model => model.IsToMe, "Select Relationship")
+                @Html.ValidationMessageFor(model => model.IsToMe)
+            </div>
+            <br />
+            <br />
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+
+        }
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+        <p></p>
+    </div>
+
+</div>
