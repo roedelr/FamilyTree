@@ -13,7 +13,7 @@ namespace FamilyTree.Controllers
     public class FamilyController : Controller
     {
 
-        public static FamilyBackend family = new FamilyBackend();
+        public static FamilyBackend Family = new FamilyBackend();
 
         public static PersonModelList data = new PersonModelList()
         {
@@ -46,6 +46,7 @@ namespace FamilyTree.Controllers
         {
             if (ModelState.IsValid)
             {
+                Family.addMember(NextMember);
 
                 data.PersonList.Add(NextMember);
 
