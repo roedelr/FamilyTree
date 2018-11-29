@@ -66,8 +66,10 @@ namespace FamilyTree.Controllers
         }
 
         [HttpGet]
-        public ActionResult Update(string FirstName=null)
+        public ActionResult Update(string FirstName = null, int ID = -1)
         {
+            Family.getMember(ID);
+
             PersonModel person = new PersonModel();
 
             person = data.PersonList.Find(model=>model.FirstName==FirstName);
@@ -76,7 +78,7 @@ namespace FamilyTree.Controllers
                 return HttpNotFound();
             }
 
-            return View(person);
+            return View(Family.MyFam.CurrentPerson);
         }
 
         [HttpPost]
@@ -98,8 +100,10 @@ namespace FamilyTree.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult Delete(string FirstName=null)
+        public ActionResult Delete(string FirstName = null, int ID = -1)
         {
+            Family.getMember(ID);
+
             PersonModel person = new PersonModel();
 
             person = data.PersonList.Single(model => model.FirstName == FirstName);
@@ -107,7 +111,7 @@ namespace FamilyTree.Controllers
             {
                 return HttpNotFound();
             }
-            return View(person);
+            return View(Family.MyFam.CurrentPerson);
         }
 
         //
