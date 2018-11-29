@@ -37,14 +37,12 @@ namespace FamilyTree.Backend
             return true;
         }
 
-        public bool removeMember(PersonModel deleteMember)
+        public bool removeMember()
         {
             MyFam.PersonList.Remove(MyFam.CurrentPerson);
 
             return true;
         }
-
-
 
         public bool updateMember(PersonModel updateMember)
         {
