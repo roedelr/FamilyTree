@@ -12,5 +12,10 @@ namespace FamilyTree.Controllers
         {
             return View();
         }
+        public ActionResult Error()
+        {
+            return View();
+        }
+
     }
 }

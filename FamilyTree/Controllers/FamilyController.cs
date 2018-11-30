@@ -42,14 +42,18 @@ namespace FamilyTree.Controllers
             "IsToMe," +
             "")] PersonModel NextMember)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                Family.addMember(NextMember);
-
-                return RedirectToAction("Index");
+               return View();
             }
+            if(string.IsNullOrEmpty(NextMember.FirstName))
+            {
+                return RedirectToAction("Error","Home");
+            }
+        Family.addMember(NextMember);
 
-            return View();
+        return RedirectToAction("Index");
+            
         }
 
         [HttpGet]
@@ -64,8 +68,10 @@ namespace FamilyTree.Controllers
         public ActionResult Update(int ID)
         {
             Family.getMember(ID);
-            
-            return View(Family.MyFam.CurrentPerson);
+
+            var data = Family.MyFam.CurrentPerson;
+
+            return View(data);
         }
 
         [HttpPost]
@@ -81,6 +87,7 @@ namespace FamilyTree.Controllers
 
             return RedirectToAction("Index");
         }
+
         [HttpGet]
         public ActionResult Delete(int ID)
         {
@@ -89,9 +96,7 @@ namespace FamilyTree.Controllers
             return View(Family.MyFam.CurrentPerson);
         }
 
-        //
         // POST: /Family/Delete/
-
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteconFirm([Bind(Include =
             "FirstName," +

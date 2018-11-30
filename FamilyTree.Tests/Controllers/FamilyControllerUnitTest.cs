@@ -48,11 +48,40 @@ namespace FamilyTree.Tests.Controllers
 
             var data = new PersonModel();
 
-            //Act
+            var result = (RedirectToRouteResult)controller.Update(data);
+
+            Assert.AreEqual("Index", result.RouteValues["action"]);
+        }
+        [TestMethod]
+        public void Conroller_FamilyController_Create_Post_Invalid_Default_Should_Fail()
+        {
+            //Arrange
+            FamilyController controller = new FamilyController();
+
+            var data = new PersonModel();
+            data.FirstName = null;
+
+            var result = (RedirectToRouteResult)controller.Create(data);
+
+            Assert.AreEqual("Error", result.RouteValues["action"]);
+
+            Assert.AreEqual("Home", result.RouteValues["controller"]);
+        }
+
+        [TestMethod]
+        public void Conroller_FamilyController_Create_Post_Invalid_Model_Should_Fail()
+        {
+            //Arrange
+            FamilyController controller = new FamilyController();
+            controller.ModelState.AddModelError("fakeError", "fakeError");
+            var data = new PersonModel();
+            data.FirstName = null;
+
             ViewResult result = controller.Create(data) as ViewResult;
 
-            //Assert
+            // Assert
             Assert.IsNotNull(result);
+
         }
 
         [TestMethod]
@@ -76,12 +105,11 @@ namespace FamilyTree.Tests.Controllers
             FamilyController controller = new FamilyController();
 
             var data = new PersonModel();
-            
-            // Act
-            ViewResult result = controller.Update(data) as ViewResult;
 
-            // Assert
-            Assert.IsNotNull(result);
+            var result = (RedirectToRouteResult)controller.Update(data);
+
+            Assert.AreEqual("Index", result.RouteValues["action"]);
+
         }
 
         
