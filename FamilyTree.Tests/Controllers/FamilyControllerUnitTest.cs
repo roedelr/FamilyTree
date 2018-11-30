@@ -73,8 +73,11 @@ namespace FamilyTree.Tests.Controllers
         {
             //Arrange
             FamilyController controller = new FamilyController();
+
             controller.ModelState.AddModelError("fakeError", "fakeError");
+
             var data = new PersonModel();
+
             data.FirstName = null;
 
             ViewResult result = controller.Create(data) as ViewResult;
@@ -84,19 +87,19 @@ namespace FamilyTree.Tests.Controllers
 
         }
 
-        [TestMethod]
-        public void Controller_FamilyController_Update_Default_Should_Pass()
-        {
-            // Arrange
-            FamilyController controller = new FamilyController();
+        //[TestMethod]
+        //public void Controller_FamilyController_Update_Default_Should_Pass()
+        //{
+        //    // Arrange
+        //    FamilyController controller = new FamilyController();
 
-            // Act
-            // FixME: parameter chosen at random for Update(int ID)
-            ViewResult result = controller.Update(0) as ViewResult;
+        //    // Act
+        //    // FixME: parameter chosen at random for Update(int ID)
+        //    ViewResult result = controller.Update(0) as ViewResult;
 
-            // Assert
-            Assert.IsNotNull(result);
-        }
+        //    // Assert
+        //    Assert.IsNotNull(result);
+        //}
 
         [TestMethod]
         public void Controller_FamilyController_Update_Post_Default_Should_Pass()
