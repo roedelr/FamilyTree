@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FamilyTree;
 using FamilyTree.Controllers;
 using FamilyTree.Models;
+using FamilyTree.Models.Enums;
 
 namespace FamilyTree.Tests.Controllers
 {
@@ -23,6 +24,34 @@ namespace FamilyTree.Tests.Controllers
             ViewResult result = controller.Index() as ViewResult;
 
             // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void Conroller_FamilyController_Create_Default_Should_Pass()
+        {
+            //Arrange
+            FamilyController controller = new FamilyController();
+
+            //Act
+            ViewResult result = controller.Create() as ViewResult;
+
+            //Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void Conroller_FamilyController_Create_Post_Default_Should_Pass()
+        {
+            //Arrange
+            FamilyController controller = new FamilyController();
+
+            var data = new PersonModel();
+
+            //Act
+            ViewResult result = controller.Create(data) as ViewResult;
+
+            //Assert
             Assert.IsNotNull(result);
         }
 
@@ -47,7 +76,7 @@ namespace FamilyTree.Tests.Controllers
             FamilyController controller = new FamilyController();
 
             var data = new PersonModel();
-           
+            
             // Act
             ViewResult result = controller.Update(data) as ViewResult;
 
@@ -55,17 +84,6 @@ namespace FamilyTree.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
-        [TestMethod]
-        public void Conroller_FamilyController_Create_Default_Should_Pass()
-        {
-            //Arrange
-            FamilyController controller = new FamilyController();
-
-            //Act
-            ViewResult result = controller.Create() as ViewResult;
-
-            //Assert
-            Assert.IsNotNull(result);
-        }
+        
     }
 }
