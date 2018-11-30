@@ -39,5 +39,21 @@ namespace FamilyTree.Tests.Controllers
             // Assert
             Assert.IsNotNull(result);
         }
+
+        [TestMethod]
+        public void Controller_UserController_SignIn_Post_Default_Should_Pass()
+        {
+            // Arrange
+            UserController controller = new UserController();
+
+            var data = new UserModel();
+
+            // Act
+            ViewResult result = controller.SignIn(data) as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+
+        }
     }
 }
