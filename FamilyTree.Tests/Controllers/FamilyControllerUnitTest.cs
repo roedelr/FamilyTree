@@ -33,7 +33,8 @@ namespace FamilyTree.Tests.Controllers
             FamilyController controller = new FamilyController();
 
             // Act
-            ViewResult result = controller.Update() as ViewResult;
+            // FixME: parameter chosen at random for Update(int ID)
+            ViewResult result = controller.Update(0) as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
