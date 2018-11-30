@@ -91,6 +91,7 @@
   <ItemGroup>
     <Compile Include="Backend\FamilyBackendTest.cs" />
     <Compile Include="Controllers\FamilyControllerUnitTest.cs" />
+    <Compile Include="Controllers\UserControlerUnitTest.cs" />
     <Compile Include="Models\Enums\RelationshipEnumUnitTests.cs" />
     <Compile Include="Models\PersonModelUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
