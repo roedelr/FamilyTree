@@ -18,16 +18,12 @@ namespace FamilyTree.Backend
 
         public bool addMember(PersonModel NextMember)
         {
-            if (MyFam.PersonList.IndexOf(NextMember) == -1)
-            {
-                NextMember.ID = getID();
+            
+            NextMember.ID = getID();
 
-                MyFam.PersonList.Add(NextMember);
+            MyFam.PersonList.Add(NextMember);
 
-                return true;
-            }
-
-            return false;
+            return true;
         }
 
         public bool getMember(int ID)
