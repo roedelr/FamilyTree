@@ -89,6 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backend\FamilyBackendTest.cs" />
     <Compile Include="Controllers\FamilyControllerUnitTest.cs" />
     <Compile Include="Models\Enums\RelationshipEnumUnitTests.cs" />
     <Compile Include="Models\PersonModelUnitTests.cs" />
@@ -107,9 +108,7 @@
       <Name>FamilyTree</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Backend\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
