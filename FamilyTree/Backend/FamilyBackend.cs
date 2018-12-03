@@ -42,7 +42,7 @@ namespace FamilyTree.Backend
 
         public bool updateMember(PersonModel updateMember)
         {
-            MyFam.CurrentPerson.FirstName = updateMember.FirstName;
+            //MyFam.CurrentPerson.FirstName = updateMember.FirstName;
             MyFam.CurrentPerson.LastName = updateMember.LastName;
             MyFam.CurrentPerson.DOB = updateMember.DOB;
             MyFam.CurrentPerson.IsToMe = updateMember.IsToMe;

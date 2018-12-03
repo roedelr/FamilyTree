@@ -230,6 +230,7 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Settings\Read.cshtml" />
     <Content Include="Views\Settings\Update.cshtml" />
+    <Content Include="Views\Family\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
