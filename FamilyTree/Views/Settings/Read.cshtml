@@ -1,0 +1,104 @@
+﻿@model FamilyTree.Models.SettingsModel
+@{
+    ViewBag.Title = "Read";
+
+}
+
+<br />
+<div class="row justify-content-center">
+
+    <div class="col-sm-1 "></div>
+    <div class="col-sm-12">
+        <br />
+        <div class="FontSizeLarge text-center">
+            <span class="FontSizeLarger FontBold FontColorBlack">
+                Settings
+            </span>
+        </div>
+        <br />
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+<div class="row">
+    <br />
+    <br />
+</div>
+
+@{
+    if (Model == null)
+    {
+        <div class="row text-center">
+
+            <div class="col-sm-1 "></div>
+            <div class="col-sm-12">
+                <br />
+                <div class="FontSizeLarge text-center FontColorBlack">
+                    No Data
+                </div>
+                <br />
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    }
+
+    else
+    {
+        <div class="row justify-content-center FontColorBlack">
+
+            <div class="col-sm-1 "></div>
+            <div class="col-sm-12">
+                <br />
+                <div class="FontSizeMedium text-center">
+                    <br />
+                    <br />
+
+                    <div class="row">
+                        <div class="col-sm-5 text-right">
+                            @Html.DisplayNameFor(m => m.Password)
+                        </div>
+                        <div class="col-sm-1">
+                            &nbsp;:&nbsp;
+                        </div>
+                        <div class="col-sm-6 text-left">
+                            @Html.DisplayFor(m => m.Password)
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-5 text-right">
+                            @Html.DisplayNameFor(m => m.TimeZone)
+                        </div>
+                        <div class="col-sm-1">
+                            &nbsp;:&nbsp;
+                        </div>
+                        <div class="col-sm-6 text-left">
+                            @Html.DisplayFor(m => m.TimeZone.DisplayName)
+                        </div>
+                    </div>
+
+                    <br />
+                    <hr />
+                </div>
+                <br />
+
+                <div class="row justify-content-center">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-1 text-center">
+                        @Html.ActionLink("Back", "Index", new {Controller = "Home" }, new { @class = "btn btn-large btn-warning" })
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-1 text-center">
+                        @Html.ActionLink("Update", "Update", new { id = Model.Id }, new { @class = "btn btn-large btn-default" })
+                    </div>
+                </div>
+
+                <br />
+
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    }
+}
+
+<br />

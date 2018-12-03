@@ -172,3 +172,40 @@ p.jumbotron-custom-text {
 a, a:hover {
     color: black;
 }
+
+.FontColor1 {
+    color: white;
+}
+
+/*Extra Large must be inside a Large Span, to work*/
+.FontSizeLarger {
+    font-size: 125%;
+}
+
+.FontSizeLarge {
+    font-size: xx-large;
+}
+
+.FontSizeMedium {
+    font-size: x-large;
+}
+
+.FontSizeSmall {
+    font-size: large;
+}
+
+.FontColorWhite {
+    color: white;
+}
+
+.FontColorBlack {
+    color: black;
+}
+
+.FontBold {
+    font-weight: bold;
+}
+
+.FontNormal {
+    font-weight: normal;
+}

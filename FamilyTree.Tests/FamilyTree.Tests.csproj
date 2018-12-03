@@ -89,11 +89,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backend\DataSourceBackendTableUnitTests.cs" />
+    <Compile Include="Backend\DataSourceBackendUnitTests.cs" />
     <Compile Include="Backend\FamilyBackendTest.cs" />
+    <Compile Include="Backend\SettingsBackendUnitTests.cs" />
+    <Compile Include="Backend\SettingsDataSourceMockUnitTests.cs" />
+    <Compile Include="Backend\SettingsDataSourceTableUnitTests.cs" />
     <Compile Include="Controllers\FamilyControllerUnitTest.cs" />
     <Compile Include="Controllers\UserControlerUnitTest.cs" />
+    <Compile Include="Models\Enums\DataSourceDataSetEnumUnitTests.cs" />
+    <Compile Include="Models\Enums\DataSourceEnumUnitTests.cs" />
     <Compile Include="Models\Enums\RelationshipEnumUnitTests.cs" />
     <Compile Include="Models\PersonModelUnitTests.cs" />
+    <Compile Include="Models\SystemGlobalsModelUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
   </ItemGroup>

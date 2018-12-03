@@ -1,0 +1,110 @@
+﻿@model FamilyTree.Models.SettingsModel
+@{
+    ViewBag.Title ="Update";
+
+}
+
+<br />
+<div class="row justify-content-center">
+
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
+        <br />
+        <div class="FontSizeLarge text-center">
+            <span class="FontSizeLarger FontBold FontColorBlack">
+                Settings
+            </span>
+        </div>
+        <br />
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+<div class="row">
+    <br />
+    <br />
+</div>
+
+
+@{
+    if (Model == null)
+    {
+        <div class="row justify-content-center">
+
+            <div class="col-sm-1"></div>
+            <div class="col-sm-6">
+                <br />
+                <div class="FontSizeLarge text-center FontColorBlack">
+                    No Data
+                </div>
+                <br />
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    }
+
+    else
+    {
+        <div class="row justify-content-center FontColorBlack">
+
+            <div class="col-sm-1"></div>
+            <div class="col-sm-6 FontSizeMedium text-center">
+                <br />
+                <br />
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(m => m.Id)
+
+
+                    <div class="row justify-content-center">
+                        <div class="col-sm-2 text-sm-center text-md-right" id="Password">
+                            @Html.DisplayNameFor(m => m.Password)
+                        </div>
+                        <div class="col-sm-1">
+
+                        </div>
+                        <div class="col-sm-6 text-left" id="PasswordValue">
+                            @Html.EditorFor(m => m.Password)
+                            @Html.ValidationMessageFor(m => m.Password)
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="row justify-content-center">
+                        <div class="col-sm-2 text-sm-center text-md-right" id="TimeZone">
+                            @Html.DisplayNameFor(m => m.TimeZone)
+                        </div>
+                        <div class="col-sm-1">
+
+                        </div>
+                        <div class="col-sm-6 text-left" id="TimeZoneValue">
+                            @Html.DropDownListFor(m => m.SelectedTimeZoneId, Model.TimeZones)
+                        </div>
+                    </div>
+
+                    <br />
+                    <hr />
+                    <br />
+
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-1 justify-content-center text-center">
+                            @Html.ActionLink("Back", "Index", new { Controller = "Home" }, new { @class = "btn btn-large btn-warning" })
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-1 justify-content-center text-center">
+                            <input type="submit" value="Update" class="btn btn-large btn-default">
+                        </div>
+                    </div>
+
+                    <br />
+                }
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    }
+}
+
+<br />
