@@ -1,0 +1,2735 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_KenWorthModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Build_Table">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="BuildNo" Type="nvarchar" MaxLength="30" />
+          <Property Name="PartNo" Type="nvarchar" MaxLength="30" />
+          <Property Name="Loc" Type="nvarchar" MaxLength="20" />
+          <Property Name="Desr" Type="nvarchar" MaxLength="100" />
+          <Property Name="Ex" Type="nvarchar" MaxLength="20" />
+          <Property Name="Variant" Type="nvarchar" MaxLength="100" />
+          <Property Name="Ind" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Drain_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="int" Nullable="false" />
+          <Property Name="DefectType_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_10" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_10" Type="varchar" MaxLength="20" />
+          <Property Name="X_Coordinate_1" Type="int" />
+          <Property Name="X_Coordinate_2" Type="int" />
+          <Property Name="X_Coordinate_3" Type="int" />
+          <Property Name="X_Coordinate_4" Type="int" />
+          <Property Name="X_Coordinate_5" Type="int" />
+          <Property Name="X_Coordinate_6" Type="int" />
+          <Property Name="X_Coordinate_7" Type="int" />
+          <Property Name="X_Coordinate_8" Type="int" />
+          <Property Name="X_Coordinate_9" Type="int" />
+          <Property Name="X_Coordinate_10" Type="int" />
+          <Property Name="Y_Coordinate_1" Type="int" />
+          <Property Name="Y_Coordinate_2" Type="int" />
+          <Property Name="Y_Coordinate_3" Type="int" />
+          <Property Name="Y_Coordinate_4" Type="int" />
+          <Property Name="Y_Coordinate_5" Type="int" />
+          <Property Name="Y_Coordinate_6" Type="int" />
+          <Property Name="Y_Coordinate_7" Type="int" />
+          <Property Name="Y_Coordinate_8" Type="int" />
+          <Property Name="Y_Coordinate_9" Type="int" />
+          <Property Name="Y_Coordinate_10" Type="int" />
+        </EntityType>
+        <EntityType Name="dtproperty">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="property" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="objectid" Type="int" />
+          <Property Name="property" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="value" Type="varchar" MaxLength="255" />
+          <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+          <Property Name="lvalue" Type="varbinary(max)" />
+          <Property Name="version" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ExemptCard_Card_Data">
+          <Key>
+            <PropertyRef Name="Card_ID" />
+            <PropertyRef Name="SDate" />
+            <PropertyRef Name="FName" />
+            <PropertyRef Name="LName" />
+            <PropertyRef Name="SAP" />
+            <PropertyRef Name="Dept" />
+          </Key>
+          <Property Name="Card_ID" Type="int" Nullable="false" />
+          <Property Name="SDate" Type="datetime" Nullable="false" />
+          <Property Name="FName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SAP" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Dept" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MON1_Date" Type="datetime2" Precision="3" />
+          <Property Name="MON1_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_Date" Type="datetime2" Precision="3" />
+          <Property Name="MON2_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_Date" Type="datetime2" Precision="3" />
+          <Property Name="TUE1_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_Date" Type="datetime2" Precision="3" />
+          <Property Name="TUE2_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_Date" Type="datetime2" Precision="3" />
+          <Property Name="WED1_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_Date" Type="datetime2" Precision="3" />
+          <Property Name="WED2_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_Date" Type="datetime2" Precision="3" />
+          <Property Name="THU1_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_Date" Type="datetime2" Precision="3" />
+          <Property Name="THU2_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_Date" Type="datetime2" Precision="3" />
+          <Property Name="FRI1_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_Date" Type="datetime2" Precision="3" />
+          <Property Name="FRI2_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_Date" Type="datetime2" Precision="3" />
+          <Property Name="SAT1_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_Date" Type="datetime2" Precision="3" />
+          <Property Name="SAT2_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_Date" Type="datetime2" Precision="3" />
+          <Property Name="SUN1_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_Date" Type="datetime2" Precision="3" />
+          <Property Name="SUN2_2010" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_2004" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_2007" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_STD0" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_STD2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_STDF" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_2013" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_2016" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_2019" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_3005" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_MISC5" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_MISC1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_MISC2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_MISC3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_MISC4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_MISC5" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="FillerNeck_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="int" Nullable="false" />
+          <Property Name="DefectType_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_10" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_10" Type="varchar" MaxLength="20" />
+          <Property Name="X_Coordinate_1" Type="int" />
+          <Property Name="X_Coordinate_2" Type="int" />
+          <Property Name="X_Coordinate_3" Type="int" />
+          <Property Name="X_Coordinate_4" Type="int" />
+          <Property Name="X_Coordinate_5" Type="int" />
+          <Property Name="X_Coordinate_6" Type="int" />
+          <Property Name="X_Coordinate_7" Type="int" />
+          <Property Name="X_Coordinate_8" Type="int" />
+          <Property Name="X_Coordinate_9" Type="int" />
+          <Property Name="X_Coordinate_10" Type="int" />
+          <Property Name="Y_Coordinate_1" Type="int" />
+          <Property Name="Y_Coordinate_2" Type="int" />
+          <Property Name="Y_Coordinate_3" Type="int" />
+          <Property Name="Y_Coordinate_4" Type="int" />
+          <Property Name="Y_Coordinate_5" Type="int" />
+          <Property Name="Y_Coordinate_6" Type="int" />
+          <Property Name="Y_Coordinate_7" Type="int" />
+          <Property Name="Y_Coordinate_8" Type="int" />
+          <Property Name="Y_Coordinate_9" Type="int" />
+          <Property Name="Y_Coordinate_10" Type="int" />
+        </EntityType>
+        <EntityType Name="FuelTankShipTracking">
+          <Key>
+            <PropertyRef Name="index_" />
+          </Key>
+          <Property Name="index_" Type="int" Nullable="false" />
+          <Property Name="PartNumber" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Sequence" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShippingScanDateTime" Type="datetime2" Precision="3" />
+          <Property Name="RifflesScanDateTime" Type="datetime2" Precision="3" />
+          <Property Name="Location" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HA_66a_LabelData">
+          <Key>
+            <PropertyRef Name="RecordNo" />
+          </Key>
+          <Property Name="RecordNo" Type="int" Nullable="false" />
+          <Property Name="ChassisNo" Type="varchar" MaxLength="50" />
+          <Property Name="FRAMESEQUENCENO" Type="varchar" MaxLength="50" />
+          <Property Name="PARTNO" Type="varchar" MaxLength="50" />
+          <Property Name="PARTQTY" Type="varchar" MaxLength="50" />
+          <Property Name="BILLOFMATERIALLINETXT" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Heater_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="int" Nullable="false" />
+          <Property Name="DefectType_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_10" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_10" Type="varchar" MaxLength="20" />
+          <Property Name="X_Coordinate_1" Type="int" />
+          <Property Name="X_Coordinate_2" Type="int" />
+          <Property Name="X_Coordinate_3" Type="int" />
+          <Property Name="X_Coordinate_4" Type="int" />
+          <Property Name="X_Coordinate_5" Type="int" />
+          <Property Name="X_Coordinate_6" Type="int" />
+          <Property Name="X_Coordinate_7" Type="int" />
+          <Property Name="X_Coordinate_8" Type="int" />
+          <Property Name="X_Coordinate_9" Type="int" />
+          <Property Name="X_Coordinate_10" Type="int" />
+          <Property Name="Y_Coordinate_1" Type="int" />
+          <Property Name="Y_Coordinate_2" Type="int" />
+          <Property Name="Y_Coordinate_3" Type="int" />
+          <Property Name="Y_Coordinate_4" Type="int" />
+          <Property Name="Y_Coordinate_5" Type="int" />
+          <Property Name="Y_Coordinate_6" Type="int" />
+          <Property Name="Y_Coordinate_7" Type="int" />
+          <Property Name="Y_Coordinate_8" Type="int" />
+          <Property Name="Y_Coordinate_9" Type="int" />
+          <Property Name="Y_Coordinate_10" Type="int" />
+        </EntityType>
+        <EntityType Name="Lable_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Location" Type="varchar" MaxLength="100" />
+          <Property Name="ChassisNo" Type="varchar" MaxLength="100" />
+          <Property Name="SequenceNo" Type="varchar" MaxLength="100" />
+          <Property Name="TankNo" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo_1" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo_2" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo_3" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo_4" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo_5" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo_6" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo_7" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo_8" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo_9" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo2_1" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo2_2" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo2_3" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo2_4" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo2_5" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo2_6" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo2_7" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo2_8" Type="varchar" MaxLength="100" />
+          <Property Name="PartNo2_9" Type="varchar" MaxLength="100" />
+          <Property Name="SpecialMessage1" Type="varchar" MaxLength="100" />
+          <Property Name="SpecialMessage2" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="SendingUnit_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="int" Nullable="false" />
+          <Property Name="DefectType_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_10" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_10" Type="varchar" MaxLength="20" />
+          <Property Name="X_Coordinate_1" Type="int" />
+          <Property Name="X_Coordinate_2" Type="int" />
+          <Property Name="X_Coordinate_3" Type="int" />
+          <Property Name="X_Coordinate_4" Type="int" />
+          <Property Name="X_Coordinate_5" Type="int" />
+          <Property Name="X_Coordinate_6" Type="int" />
+          <Property Name="X_Coordinate_7" Type="int" />
+          <Property Name="X_Coordinate_8" Type="int" />
+          <Property Name="X_Coordinate_9" Type="int" />
+          <Property Name="X_Coordinate_10" Type="int" />
+          <Property Name="Y_Coordinate_1" Type="int" />
+          <Property Name="Y_Coordinate_2" Type="int" />
+          <Property Name="Y_Coordinate_3" Type="int" />
+          <Property Name="Y_Coordinate_4" Type="int" />
+          <Property Name="Y_Coordinate_5" Type="int" />
+          <Property Name="Y_Coordinate_6" Type="int" />
+          <Property Name="Y_Coordinate_7" Type="int" />
+          <Property Name="Y_Coordinate_8" Type="int" />
+          <Property Name="Y_Coordinate_9" Type="int" />
+          <Property Name="Y_Coordinate_10" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TankFront_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="int" Nullable="false" />
+          <Property Name="DefectType_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_10" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_10" Type="varchar" MaxLength="20" />
+          <Property Name="X_Coordinate_1" Type="int" />
+          <Property Name="X_Coordinate_2" Type="int" />
+          <Property Name="X_Coordinate_3" Type="int" />
+          <Property Name="X_Coordinate_4" Type="int" />
+          <Property Name="X_Coordinate_5" Type="int" />
+          <Property Name="X_Coordinate_6" Type="int" />
+          <Property Name="X_Coordinate_7" Type="int" />
+          <Property Name="X_Coordinate_8" Type="int" />
+          <Property Name="X_Coordinate_9" Type="int" />
+          <Property Name="X_Coordinate_10" Type="int" />
+          <Property Name="Y_Coordinate_1" Type="int" />
+          <Property Name="Y_Coordinate_2" Type="int" />
+          <Property Name="Y_Coordinate_3" Type="int" />
+          <Property Name="Y_Coordinate_4" Type="int" />
+          <Property Name="Y_Coordinate_5" Type="int" />
+          <Property Name="Y_Coordinate_6" Type="int" />
+          <Property Name="Y_Coordinate_7" Type="int" />
+          <Property Name="Y_Coordinate_8" Type="int" />
+          <Property Name="Y_Coordinate_9" Type="int" />
+          <Property Name="Y_Coordinate_10" Type="int" />
+        </EntityType>
+        <EntityType Name="TankRear_Data">
+          <Key>
+            <PropertyRef Name="Build_Table" />
+          </Key>
+          <Property Name="Build_Table" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="DefectType_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_10" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_10" Type="varchar" MaxLength="20" />
+          <Property Name="X_Coordinate_1" Type="int" />
+          <Property Name="X_Coordinate_2" Type="int" />
+          <Property Name="X_Coordinate_3" Type="int" />
+          <Property Name="X_Coordinate_4" Type="int" />
+          <Property Name="X_Coordinate_5" Type="int" />
+          <Property Name="X_Coordinate_6" Type="int" />
+          <Property Name="X_Coordinate_7" Type="int" />
+          <Property Name="X_Coordinate_8" Type="int" />
+          <Property Name="X_Coordinate_9" Type="int" />
+          <Property Name="X_Coordinate_10" Type="int" />
+          <Property Name="Y_Coordinate_1" Type="int" />
+          <Property Name="Y_Coordinate_2" Type="int" />
+          <Property Name="Y_Coordinate_3" Type="int" />
+          <Property Name="Y_Coordinate_4" Type="int" />
+          <Property Name="Y_Coordinate_5" Type="int" />
+          <Property Name="Y_Coordinate_6" Type="int" />
+          <Property Name="Y_Coordinate_7" Type="int" />
+          <Property Name="Y_Coordinate_8" Type="int" />
+          <Property Name="Y_Coordinate_9" Type="int" />
+          <Property Name="Y_Coordinate_10" Type="int" />
+        </EntityType>
+        <EntityType Name="TankTransaction_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="int" Nullable="false" />
+          <Property Name="Date" Type="varchar" MaxLength="20" />
+          <Property Name="Time" Type="varchar" MaxLength="20" />
+          <Property Name="TankNumber" Type="varchar" MaxLength="20" />
+          <Property Name="SequenceNumber" Type="varchar" MaxLength="20" />
+          <Property Name="Operator" Type="varchar" MaxLength="20" />
+          <Property Name="Robot" Type="varchar" MaxLength="20" />
+          <Property Name="TankSize" Type="int" />
+          <Property Name="StationNumber" Type="int" />
+          <Property Name="DrainLocation" Type="varchar" MaxLength="20" />
+          <Property Name="RepairTotal" Type="int" />
+          <Property Name="ScrapTotal" Type="int" />
+          <Property Name="LeakerTotal" Type="int" />
+          <Property Name="ScratchTotal" Type="int" />
+          <Property Name="Repairs_Total" Type="int" />
+        </EntityType>
+        <EntityType Name="ToughTruckStartView">
+          <Key>
+            <PropertyRef Name="PartNumber" />
+            <PropertyRef Name="chassis" />
+          </Key>
+          <Property Name="PartNumber" Type="nvarchar" MaxLength="19" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="25" />
+          <Property Name="pl" Type="char" MaxLength="1" />
+          <Property Name="QTYOnHand" Type="decimal" Precision="6" Scale="0" />
+          <Property Name="QTYOnOrder" Type="decimal" Precision="5" Scale="0" />
+          <Property Name="TotalREQ" Type="decimal" Precision="5" Scale="0" />
+          <Property Name="TQTY" Type="decimal" Precision="38" Scale="0" />
+          <Property Name="STL_CLS" Type="nvarchar" MaxLength="3" />
+          <Property Name="SR_TY" Type="nvarchar" MaxLength="2" />
+          <Property Name="iclass" Type="char" MaxLength="1" />
+          <Property Name="UnitCost" Type="decimal" Precision="12" Scale="3" />
+          <Property Name="seq" Type="nvarchar" MaxLength="7" />
+          <Property Name="chassis" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="bmcd" Type="nchar" MaxLength="1" />
+          <Property Name="suppl" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="uvw_EXT_RESOURCE_ChassisInProcess">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="Major_Component" />
+            <PropertyRef Name="Line_Location" />
+            <PropertyRef Name="Location_Name" />
+            <PropertyRef Name="MajorComponentTypeCd" />
+            <PropertyRef Name="AssemblyLineNo" />
+            <PropertyRef Name="AssemblyLineLocationNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="varchar" MaxLength="7" />
+          <Property Name="CabSequenceNo" Type="varchar" MaxLength="7" />
+          <Property Name="Major_Component" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Line_Location" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Location_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Location_Number" Type="int" />
+          <Property Name="MajorComponentTypeCd" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="AssemblyLineNo" Type="int" Nullable="false" />
+          <Property Name="AssemblyLineLocationNo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vent_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="int" Nullable="false" />
+          <Property Name="DefectType_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectType_10" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_1" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_2" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_3" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_4" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_5" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_6" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_7" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_8" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_9" Type="varchar" MaxLength="20" />
+          <Property Name="DefectCatagory_10" Type="varchar" MaxLength="20" />
+          <Property Name="X_Coordinate_1" Type="int" />
+          <Property Name="X_Coordinate_2" Type="int" />
+          <Property Name="X_Coordinate_3" Type="int" />
+          <Property Name="X_Coordinate_4" Type="int" />
+          <Property Name="X_Coordinate_5" Type="int" />
+          <Property Name="X_Coordinate_6" Type="int" />
+          <Property Name="X_Coordinate_7" Type="int" />
+          <Property Name="X_Coordinate_8" Type="int" />
+          <Property Name="X_Coordinate_9" Type="int" />
+          <Property Name="X_Coordinate_10" Type="int" />
+          <Property Name="Y_Coordinate_1" Type="int" />
+          <Property Name="Y_Coordinate_2" Type="int" />
+          <Property Name="Y_Coordinate_3" Type="int" />
+          <Property Name="Y_Coordinate_4" Type="int" />
+          <Property Name="Y_Coordinate_5" Type="int" />
+          <Property Name="Y_Coordinate_6" Type="int" />
+          <Property Name="Y_Coordinate_7" Type="int" />
+          <Property Name="Y_Coordinate_8" Type="int" />
+          <Property Name="Y_Coordinate_9" Type="int" />
+          <Property Name="Y_Coordinate_10" Type="int" />
+        </EntityType>
+        <EntityType Name="vw_ChassisInProcess">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="DealerTruckPurchaseOrderYr" />
+            <PropertyRef Name="DivisionCd" />
+            <PropertyRef Name="Major_Component" />
+            <PropertyRef Name="Line_Location" />
+            <PropertyRef Name="Location_Name" />
+            <PropertyRef Name="MajorComponentTypeCd" />
+            <PropertyRef Name="AssemblyLineNo" />
+            <PropertyRef Name="AssemblyLineLocationNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="DealerTruckPurchaseOrderYr" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="DivisionCd" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SiteCd" Type="char" MaxLength="1" />
+          <Property Name="Major_Component" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Line_Location" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Location_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Location_Number" Type="int" />
+          <Property Name="MajorComponentTypeCd" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="AssemblyLineNo" Type="int" Nullable="false" />
+          <Property Name="AssemblyLineLocationNo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_ChassisSequenceList">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="DealerTruckPurchaseOrderYr" />
+            <PropertyRef Name="DivisionCd" />
+            <PropertyRef Name="SiteCd" />
+          </Key>
+          <Property Name="ChassisNo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="varchar" MaxLength="7" />
+          <Property Name="DealerTruckPurchaseOrderYr" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="DivisionCd" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SiteCd" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_FTBuildTableImport">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="BuildStationNo" />
+            <PropertyRef Name="BillOfMaterialCd" />
+            <PropertyRef Name="BillOfMaterialLineCd" />
+          </Key>
+          <Property Name="ChassisNo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="varchar" MaxLength="7" />
+          <Property Name="BuildStationNo" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="BillOfMaterialCd" Type="varchar" MaxLength="19" Nullable="false" />
+          <Property Name="BillOfMaterialLineCd" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="BillOfMaterialLineTxt" Type="varchar" MaxLength="44" />
+          <Property Name="BillOfMaterialLineTypeCd" Type="char" MaxLength="1" />
+          <Property Name="PARTNO" Type="varchar" MaxLength="20" />
+          <Property Name="PARTQTY" Type="int" />
+        </EntityType>
+        <EntityType Name="vw_FTWDashboard_LineData">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="AssemblyLineLocationNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="varchar" MaxLength="7" />
+          <Property Name="PARTNO" Type="varchar" MaxLength="20" />
+          <Property Name="Location_Number" Type="int" />
+          <Property Name="AssemblyLineLocationNo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_FTWDashboard_PartData">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="varchar" MaxLength="7" />
+          <Property Name="PARTNO" Type="varchar" MaxLength="20" />
+          <Property Name="FirmScheduleDt" Type="datetime2" Precision="3" />
+        </EntityType>
+        <EntityType Name="vw_FuelTankLineSchedulingView">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="Location_Name" />
+            <PropertyRef Name="AssemblyLineNo" />
+            <PropertyRef Name="AssemblyLineLocationNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="varchar" MaxLength="7" />
+          <Property Name="Location_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AssemblyLineNo" Type="int" Nullable="false" />
+          <Property Name="AssemblyLineLocationNo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_SchedulingProgramRunLine">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="Location_Name" />
+            <PropertyRef Name="AssemblyLineNo" />
+            <PropertyRef Name="AssemblyLineLocationNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="varchar" MaxLength="7" />
+          <Property Name="Location_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AssemblyLineNo" Type="int" Nullable="false" />
+          <Property Name="AssemblyLineLocationNo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_SchedulingProgramTankList">
+          <Key>
+            <PropertyRef Name="AssemblyLineNo" />
+            <PropertyRef Name="AssemblyLineLocationNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="varchar" MaxLength="6" />
+          <Property Name="FrameSequenceNo" Type="varchar" MaxLength="7" />
+          <Property Name="AssemblyLineNo" Type="int" Nullable="false" />
+          <Property Name="AssemblyLineLocationNo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_tbChassisBillOfMaterials">
+          <Key>
+            <PropertyRef Name="BillOfMaterialCd" />
+          </Key>
+          <Property Name="BillOfMaterialCd" Type="varchar" MaxLength="19" Nullable="false" />
+          <Property Name="PARTNO" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="vw_TreadleValveReport">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="varchar" MaxLength="7" />
+          <Property Name="PARTNO" Type="varchar" MaxLength="20" />
+          <Property Name="BillOfMaterialLineTxt" Type="varchar" MaxLength="44" />
+          <Property Name="QTY" Type="int" />
+        </EntityType>
+        <EntityType Name="WebTrapAlert">
+          <Key>
+            <PropertyRef Name="index_" />
+          </Key>
+          <Property Name="index_" Type="int" Nullable="false" />
+          <Property Name="Sequence" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AlertTime" Type="binary" MaxLength="8" Nullable="false" />
+          <Property Name="Area" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="DB_KenWorthModelStoreContainer">
+          <EntitySet Name="Build_Table" EntityType="Self.Build_Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Drain_Data" EntityType="Self.Drain_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dtproperty" EntityType="Self.dtproperty" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ExemptCard_Card_Data" EntityType="Self.ExemptCard_Card_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FillerNeck_Data" EntityType="Self.FillerNeck_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FuelTankShipTracking" EntityType="Self.FuelTankShipTracking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HA_66a_LabelData" EntityType="Self.HA_66a_LabelData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Heater_Data" EntityType="Self.Heater_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lable_Data" EntityType="Self.Lable_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SendingUnit_Data" EntityType="Self.SendingUnit_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TankFront_Data" EntityType="Self.TankFront_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TankRear_Data" EntityType="Self.TankRear_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TankTransaction_Data" EntityType="Self.TankTransaction_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ToughTruckStartView" EntityType="Self.ToughTruckStartView" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="uvw_EXT_RESOURCE_ChassisInProcess" EntityType="Self.uvw_EXT_RESOURCE_ChassisInProcess" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vent_Data" EntityType="Self.Vent_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_ChassisInProcess" EntityType="Self.vw_ChassisInProcess" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_ChassisSequenceList" EntityType="Self.vw_ChassisSequenceList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_FTBuildTableImport" EntityType="Self.vw_FTBuildTableImport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_FTWDashboard_LineData" EntityType="Self.vw_FTWDashboard_LineData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_FTWDashboard_PartData" EntityType="Self.vw_FTWDashboard_PartData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_FuelTankLineSchedulingView" EntityType="Self.vw_FuelTankLineSchedulingView" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_SchedulingProgramRunLine" EntityType="Self.vw_SchedulingProgramRunLine" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_SchedulingProgramTankList" EntityType="Self.vw_SchedulingProgramTankList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_tbChassisBillOfMaterials" EntityType="Self.vw_tbChassisBillOfMaterials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_TreadleValveReport" EntityType="Self.vw_TreadleValveReport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WebTrapAlert" EntityType="Self.WebTrapAlert" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_KenWorthModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Build_Table">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="BuildNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PartNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Loc" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Desr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Ex" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Variant" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Ind" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Drain_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="Int32" Nullable="false" />
+          <Property Name="DefectType_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="X_Coordinate_1" Type="Int32" />
+          <Property Name="X_Coordinate_2" Type="Int32" />
+          <Property Name="X_Coordinate_3" Type="Int32" />
+          <Property Name="X_Coordinate_4" Type="Int32" />
+          <Property Name="X_Coordinate_5" Type="Int32" />
+          <Property Name="X_Coordinate_6" Type="Int32" />
+          <Property Name="X_Coordinate_7" Type="Int32" />
+          <Property Name="X_Coordinate_8" Type="Int32" />
+          <Property Name="X_Coordinate_9" Type="Int32" />
+          <Property Name="X_Coordinate_10" Type="Int32" />
+          <Property Name="Y_Coordinate_1" Type="Int32" />
+          <Property Name="Y_Coordinate_2" Type="Int32" />
+          <Property Name="Y_Coordinate_3" Type="Int32" />
+          <Property Name="Y_Coordinate_4" Type="Int32" />
+          <Property Name="Y_Coordinate_5" Type="Int32" />
+          <Property Name="Y_Coordinate_6" Type="Int32" />
+          <Property Name="Y_Coordinate_7" Type="Int32" />
+          <Property Name="Y_Coordinate_8" Type="Int32" />
+          <Property Name="Y_Coordinate_9" Type="Int32" />
+          <Property Name="Y_Coordinate_10" Type="Int32" />
+        </EntityType>
+        <EntityType Name="dtproperty">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="property" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="objectid" Type="Int32" />
+          <Property Name="property" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="value" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="uvalue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lvalue" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="version" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ExemptCard_Card_Data">
+          <Key>
+            <PropertyRef Name="Card_ID" />
+            <PropertyRef Name="SDate" />
+            <PropertyRef Name="FName" />
+            <PropertyRef Name="LName" />
+            <PropertyRef Name="SAP" />
+            <PropertyRef Name="Dept" />
+          </Key>
+          <Property Name="Card_ID" Type="Int32" Nullable="false" />
+          <Property Name="SDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SAP" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Dept" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MON1_Date" Type="DateTime" Precision="3" />
+          <Property Name="MON1_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON1_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_Date" Type="DateTime" Precision="3" />
+          <Property Name="MON2_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MON2_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_Date" Type="DateTime" Precision="3" />
+          <Property Name="TUE1_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_Date" Type="DateTime" Precision="3" />
+          <Property Name="TUE2_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_Date" Type="DateTime" Precision="3" />
+          <Property Name="WED1_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_Date" Type="DateTime" Precision="3" />
+          <Property Name="WED2_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_Date" Type="DateTime" Precision="3" />
+          <Property Name="THU1_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_Date" Type="DateTime" Precision="3" />
+          <Property Name="THU2_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_Date" Type="DateTime" Precision="3" />
+          <Property Name="FRI1_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_Date" Type="DateTime" Precision="3" />
+          <Property Name="FRI2_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_Date" Type="DateTime" Precision="3" />
+          <Property Name="SAT1_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_Date" Type="DateTime" Precision="3" />
+          <Property Name="SAT2_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_Date" Type="DateTime" Precision="3" />
+          <Property Name="SUN1_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_Date" Type="DateTime" Precision="3" />
+          <Property Name="SUN2_2010" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_2004" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_2007" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_STD0" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_STD2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_STDF" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_2013" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_2016" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_2019" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_3005" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE1_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TUE2_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED1_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="WED2_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU1_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU2_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI1_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FRI2_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT1_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SAT2_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN1_MISC5" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_MISC1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_MISC2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_MISC3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_MISC4" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SUN2_MISC5" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="FillerNeck_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="Int32" Nullable="false" />
+          <Property Name="DefectType_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="X_Coordinate_1" Type="Int32" />
+          <Property Name="X_Coordinate_2" Type="Int32" />
+          <Property Name="X_Coordinate_3" Type="Int32" />
+          <Property Name="X_Coordinate_4" Type="Int32" />
+          <Property Name="X_Coordinate_5" Type="Int32" />
+          <Property Name="X_Coordinate_6" Type="Int32" />
+          <Property Name="X_Coordinate_7" Type="Int32" />
+          <Property Name="X_Coordinate_8" Type="Int32" />
+          <Property Name="X_Coordinate_9" Type="Int32" />
+          <Property Name="X_Coordinate_10" Type="Int32" />
+          <Property Name="Y_Coordinate_1" Type="Int32" />
+          <Property Name="Y_Coordinate_2" Type="Int32" />
+          <Property Name="Y_Coordinate_3" Type="Int32" />
+          <Property Name="Y_Coordinate_4" Type="Int32" />
+          <Property Name="Y_Coordinate_5" Type="Int32" />
+          <Property Name="Y_Coordinate_6" Type="Int32" />
+          <Property Name="Y_Coordinate_7" Type="Int32" />
+          <Property Name="Y_Coordinate_8" Type="Int32" />
+          <Property Name="Y_Coordinate_9" Type="Int32" />
+          <Property Name="Y_Coordinate_10" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FuelTankShipTracking">
+          <Key>
+            <PropertyRef Name="index_" />
+          </Key>
+          <Property Name="index_" Type="Int32" Nullable="false" />
+          <Property Name="PartNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sequence" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShippingScanDateTime" Type="DateTime" Precision="3" />
+          <Property Name="RifflesScanDateTime" Type="DateTime" Precision="3" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HA_66a_LabelData">
+          <Key>
+            <PropertyRef Name="RecordNo" />
+          </Key>
+          <Property Name="RecordNo" Type="Int32" Nullable="false" />
+          <Property Name="ChassisNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FRAMESEQUENCENO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PARTNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PARTQTY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BILLOFMATERIALLINETXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Heater_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="Int32" Nullable="false" />
+          <Property Name="DefectType_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="X_Coordinate_1" Type="Int32" />
+          <Property Name="X_Coordinate_2" Type="Int32" />
+          <Property Name="X_Coordinate_3" Type="Int32" />
+          <Property Name="X_Coordinate_4" Type="Int32" />
+          <Property Name="X_Coordinate_5" Type="Int32" />
+          <Property Name="X_Coordinate_6" Type="Int32" />
+          <Property Name="X_Coordinate_7" Type="Int32" />
+          <Property Name="X_Coordinate_8" Type="Int32" />
+          <Property Name="X_Coordinate_9" Type="Int32" />
+          <Property Name="X_Coordinate_10" Type="Int32" />
+          <Property Name="Y_Coordinate_1" Type="Int32" />
+          <Property Name="Y_Coordinate_2" Type="Int32" />
+          <Property Name="Y_Coordinate_3" Type="Int32" />
+          <Property Name="Y_Coordinate_4" Type="Int32" />
+          <Property Name="Y_Coordinate_5" Type="Int32" />
+          <Property Name="Y_Coordinate_6" Type="Int32" />
+          <Property Name="Y_Coordinate_7" Type="Int32" />
+          <Property Name="Y_Coordinate_8" Type="Int32" />
+          <Property Name="Y_Coordinate_9" Type="Int32" />
+          <Property Name="Y_Coordinate_10" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Lable_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ChassisNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SequenceNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TankNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo_1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo_2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo_3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo_4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo_5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo_6" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo_7" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo_8" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo_9" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo2_1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo2_2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo2_3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo2_4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo2_5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo2_6" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo2_7" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo2_8" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartNo2_9" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SpecialMessage1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SpecialMessage2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SendingUnit_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="Int32" Nullable="false" />
+          <Property Name="DefectType_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="X_Coordinate_1" Type="Int32" />
+          <Property Name="X_Coordinate_2" Type="Int32" />
+          <Property Name="X_Coordinate_3" Type="Int32" />
+          <Property Name="X_Coordinate_4" Type="Int32" />
+          <Property Name="X_Coordinate_5" Type="Int32" />
+          <Property Name="X_Coordinate_6" Type="Int32" />
+          <Property Name="X_Coordinate_7" Type="Int32" />
+          <Property Name="X_Coordinate_8" Type="Int32" />
+          <Property Name="X_Coordinate_9" Type="Int32" />
+          <Property Name="X_Coordinate_10" Type="Int32" />
+          <Property Name="Y_Coordinate_1" Type="Int32" />
+          <Property Name="Y_Coordinate_2" Type="Int32" />
+          <Property Name="Y_Coordinate_3" Type="Int32" />
+          <Property Name="Y_Coordinate_4" Type="Int32" />
+          <Property Name="Y_Coordinate_5" Type="Int32" />
+          <Property Name="Y_Coordinate_6" Type="Int32" />
+          <Property Name="Y_Coordinate_7" Type="Int32" />
+          <Property Name="Y_Coordinate_8" Type="Int32" />
+          <Property Name="Y_Coordinate_9" Type="Int32" />
+          <Property Name="Y_Coordinate_10" Type="Int32" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TankFront_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="Int32" Nullable="false" />
+          <Property Name="DefectType_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="X_Coordinate_1" Type="Int32" />
+          <Property Name="X_Coordinate_2" Type="Int32" />
+          <Property Name="X_Coordinate_3" Type="Int32" />
+          <Property Name="X_Coordinate_4" Type="Int32" />
+          <Property Name="X_Coordinate_5" Type="Int32" />
+          <Property Name="X_Coordinate_6" Type="Int32" />
+          <Property Name="X_Coordinate_7" Type="Int32" />
+          <Property Name="X_Coordinate_8" Type="Int32" />
+          <Property Name="X_Coordinate_9" Type="Int32" />
+          <Property Name="X_Coordinate_10" Type="Int32" />
+          <Property Name="Y_Coordinate_1" Type="Int32" />
+          <Property Name="Y_Coordinate_2" Type="Int32" />
+          <Property Name="Y_Coordinate_3" Type="Int32" />
+          <Property Name="Y_Coordinate_4" Type="Int32" />
+          <Property Name="Y_Coordinate_5" Type="Int32" />
+          <Property Name="Y_Coordinate_6" Type="Int32" />
+          <Property Name="Y_Coordinate_7" Type="Int32" />
+          <Property Name="Y_Coordinate_8" Type="Int32" />
+          <Property Name="Y_Coordinate_9" Type="Int32" />
+          <Property Name="Y_Coordinate_10" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TankRear_Data">
+          <Key>
+            <PropertyRef Name="Build_Table" />
+          </Key>
+          <Property Name="Build_Table" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="DefectType_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="X_Coordinate_1" Type="Int32" />
+          <Property Name="X_Coordinate_2" Type="Int32" />
+          <Property Name="X_Coordinate_3" Type="Int32" />
+          <Property Name="X_Coordinate_4" Type="Int32" />
+          <Property Name="X_Coordinate_5" Type="Int32" />
+          <Property Name="X_Coordinate_6" Type="Int32" />
+          <Property Name="X_Coordinate_7" Type="Int32" />
+          <Property Name="X_Coordinate_8" Type="Int32" />
+          <Property Name="X_Coordinate_9" Type="Int32" />
+          <Property Name="X_Coordinate_10" Type="Int32" />
+          <Property Name="Y_Coordinate_1" Type="Int32" />
+          <Property Name="Y_Coordinate_2" Type="Int32" />
+          <Property Name="Y_Coordinate_3" Type="Int32" />
+          <Property Name="Y_Coordinate_4" Type="Int32" />
+          <Property Name="Y_Coordinate_5" Type="Int32" />
+          <Property Name="Y_Coordinate_6" Type="Int32" />
+          <Property Name="Y_Coordinate_7" Type="Int32" />
+          <Property Name="Y_Coordinate_8" Type="Int32" />
+          <Property Name="Y_Coordinate_9" Type="Int32" />
+          <Property Name="Y_Coordinate_10" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TankTransaction_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Time" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TankNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SequenceNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Operator" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Robot" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TankSize" Type="Int32" />
+          <Property Name="StationNumber" Type="Int32" />
+          <Property Name="DrainLocation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RepairTotal" Type="Int32" />
+          <Property Name="ScrapTotal" Type="Int32" />
+          <Property Name="LeakerTotal" Type="Int32" />
+          <Property Name="ScratchTotal" Type="Int32" />
+          <Property Name="Repairs_Total" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ToughTruckStartView">
+          <Key>
+            <PropertyRef Name="PartNumber" />
+            <PropertyRef Name="chassis" />
+          </Key>
+          <Property Name="PartNumber" Type="String" MaxLength="19" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="pl" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="QTYOnHand" Type="Decimal" Precision="6" Scale="0" />
+          <Property Name="QTYOnOrder" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="TotalREQ" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="TQTY" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="STL_CLS" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SR_TY" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="iclass" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="UnitCost" Type="Decimal" Precision="12" Scale="3" />
+          <Property Name="seq" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="chassis" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="bmcd" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="suppl" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="uvw_EXT_RESOURCE_ChassisInProcess">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="Major_Component" />
+            <PropertyRef Name="Line_Location" />
+            <PropertyRef Name="Location_Name" />
+            <PropertyRef Name="MajorComponentTypeCd" />
+            <PropertyRef Name="AssemblyLineNo" />
+            <PropertyRef Name="AssemblyLineLocationNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="CabSequenceNo" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Major_Component" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Line_Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Location_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Location_Number" Type="Int32" />
+          <Property Name="MajorComponentTypeCd" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AssemblyLineNo" Type="Int32" Nullable="false" />
+          <Property Name="AssemblyLineLocationNo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vent_Data">
+          <Key>
+            <PropertyRef Name="RecordNumber" />
+          </Key>
+          <Property Name="RecordNumber" Type="Int32" Nullable="false" />
+          <Property Name="DefectType_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectType_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_9" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DefectCatagory_10" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="X_Coordinate_1" Type="Int32" />
+          <Property Name="X_Coordinate_2" Type="Int32" />
+          <Property Name="X_Coordinate_3" Type="Int32" />
+          <Property Name="X_Coordinate_4" Type="Int32" />
+          <Property Name="X_Coordinate_5" Type="Int32" />
+          <Property Name="X_Coordinate_6" Type="Int32" />
+          <Property Name="X_Coordinate_7" Type="Int32" />
+          <Property Name="X_Coordinate_8" Type="Int32" />
+          <Property Name="X_Coordinate_9" Type="Int32" />
+          <Property Name="X_Coordinate_10" Type="Int32" />
+          <Property Name="Y_Coordinate_1" Type="Int32" />
+          <Property Name="Y_Coordinate_2" Type="Int32" />
+          <Property Name="Y_Coordinate_3" Type="Int32" />
+          <Property Name="Y_Coordinate_4" Type="Int32" />
+          <Property Name="Y_Coordinate_5" Type="Int32" />
+          <Property Name="Y_Coordinate_6" Type="Int32" />
+          <Property Name="Y_Coordinate_7" Type="Int32" />
+          <Property Name="Y_Coordinate_8" Type="Int32" />
+          <Property Name="Y_Coordinate_9" Type="Int32" />
+          <Property Name="Y_Coordinate_10" Type="Int32" />
+        </EntityType>
+        <EntityType Name="vw_ChassisInProcess">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="DealerTruckPurchaseOrderYr" />
+            <PropertyRef Name="DivisionCd" />
+            <PropertyRef Name="Major_Component" />
+            <PropertyRef Name="Line_Location" />
+            <PropertyRef Name="Location_Name" />
+            <PropertyRef Name="MajorComponentTypeCd" />
+            <PropertyRef Name="AssemblyLineNo" />
+            <PropertyRef Name="AssemblyLineLocationNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DealerTruckPurchaseOrderYr" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DivisionCd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="SiteCd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Major_Component" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Line_Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Location_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Location_Number" Type="Int32" />
+          <Property Name="MajorComponentTypeCd" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AssemblyLineNo" Type="Int32" Nullable="false" />
+          <Property Name="AssemblyLineLocationNo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_ChassisSequenceList">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="DealerTruckPurchaseOrderYr" />
+            <PropertyRef Name="DivisionCd" />
+            <PropertyRef Name="SiteCd" />
+          </Key>
+          <Property Name="ChassisNo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="DealerTruckPurchaseOrderYr" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DivisionCd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="SiteCd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_FTBuildTableImport">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="BuildStationNo" />
+            <PropertyRef Name="BillOfMaterialCd" />
+            <PropertyRef Name="BillOfMaterialLineCd" />
+          </Key>
+          <Property Name="ChassisNo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="BuildStationNo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BillOfMaterialCd" Type="String" MaxLength="19" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BillOfMaterialLineCd" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BillOfMaterialLineTxt" Type="String" MaxLength="44" FixedLength="false" Unicode="false" />
+          <Property Name="BillOfMaterialLineTypeCd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PARTNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PARTQTY" Type="Int32" />
+        </EntityType>
+        <EntityType Name="vw_FTWDashboard_LineData">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="AssemblyLineLocationNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="PARTNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Location_Number" Type="Int32" />
+          <Property Name="AssemblyLineLocationNo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_FTWDashboard_PartData">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="PARTNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FirmScheduleDt" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="vw_FuelTankLineSchedulingView">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="Location_Name" />
+            <PropertyRef Name="AssemblyLineNo" />
+            <PropertyRef Name="AssemblyLineLocationNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Location_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AssemblyLineNo" Type="Int32" Nullable="false" />
+          <Property Name="AssemblyLineLocationNo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_SchedulingProgramRunLine">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="Location_Name" />
+            <PropertyRef Name="AssemblyLineNo" />
+            <PropertyRef Name="AssemblyLineLocationNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Location_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AssemblyLineNo" Type="Int32" Nullable="false" />
+          <Property Name="AssemblyLineLocationNo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_SchedulingProgramTankList">
+          <Key>
+            <PropertyRef Name="AssemblyLineNo" />
+            <PropertyRef Name="AssemblyLineLocationNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="FrameSequenceNo" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="AssemblyLineNo" Type="Int32" Nullable="false" />
+          <Property Name="AssemblyLineLocationNo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_tbChassisBillOfMaterials">
+          <Key>
+            <PropertyRef Name="BillOfMaterialCd" />
+          </Key>
+          <Property Name="BillOfMaterialCd" Type="String" MaxLength="19" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PARTNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vw_TreadleValveReport">
+          <Key>
+            <PropertyRef Name="ChassisNo" />
+          </Key>
+          <Property Name="ChassisNo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FrameSequenceNo" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="PARTNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BillOfMaterialLineTxt" Type="String" MaxLength="44" FixedLength="false" Unicode="false" />
+          <Property Name="QTY" Type="Int32" />
+        </EntityType>
+        <EntityType Name="WebTrapAlert">
+          <Key>
+            <PropertyRef Name="index_" />
+          </Key>
+          <Property Name="index_" Type="Int32" Nullable="false" />
+          <Property Name="Sequence" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AlertTime" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" />
+          <Property Name="Area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DB_KenWorthEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Build_Table" EntityType="Self.Build_Table" />
+          <EntitySet Name="Drain_Data" EntityType="Self.Drain_Data" />
+          <EntitySet Name="dtproperties" EntityType="Self.dtproperty" />
+          <EntitySet Name="ExemptCard_Card_Data" EntityType="Self.ExemptCard_Card_Data" />
+          <EntitySet Name="FillerNeck_Data" EntityType="Self.FillerNeck_Data" />
+          <EntitySet Name="FuelTankShipTrackings" EntityType="Self.FuelTankShipTracking" />
+          <EntitySet Name="HA_66a_LabelData" EntityType="Self.HA_66a_LabelData" />
+          <EntitySet Name="Heater_Data" EntityType="Self.Heater_Data" />
+          <EntitySet Name="Lable_Data" EntityType="Self.Lable_Data" />
+          <EntitySet Name="SendingUnit_Data" EntityType="Self.SendingUnit_Data" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TankFront_Data" EntityType="Self.TankFront_Data" />
+          <EntitySet Name="TankRear_Data" EntityType="Self.TankRear_Data" />
+          <EntitySet Name="TankTransaction_Data" EntityType="Self.TankTransaction_Data" />
+          <EntitySet Name="ToughTruckStartViews" EntityType="Self.ToughTruckStartView" />
+          <EntitySet Name="uvw_EXT_RESOURCE_ChassisInProcess" EntityType="Self.uvw_EXT_RESOURCE_ChassisInProcess" />
+          <EntitySet Name="Vent_Data" EntityType="Self.Vent_Data" />
+          <EntitySet Name="vw_ChassisInProcess" EntityType="Self.vw_ChassisInProcess" />
+          <EntitySet Name="vw_ChassisSequenceList" EntityType="Self.vw_ChassisSequenceList" />
+          <EntitySet Name="vw_FTBuildTableImport" EntityType="Self.vw_FTBuildTableImport" />
+          <EntitySet Name="vw_FTWDashboard_LineData" EntityType="Self.vw_FTWDashboard_LineData" />
+          <EntitySet Name="vw_FTWDashboard_PartData" EntityType="Self.vw_FTWDashboard_PartData" />
+          <EntitySet Name="vw_FuelTankLineSchedulingView" EntityType="Self.vw_FuelTankLineSchedulingView" />
+          <EntitySet Name="vw_SchedulingProgramRunLine" EntityType="Self.vw_SchedulingProgramRunLine" />
+          <EntitySet Name="vw_SchedulingProgramTankList" EntityType="Self.vw_SchedulingProgramTankList" />
+          <EntitySet Name="vw_tbChassisBillOfMaterials" EntityType="Self.vw_tbChassisBillOfMaterials" />
+          <EntitySet Name="vw_TreadleValveReport" EntityType="Self.vw_TreadleValveReport" />
+          <EntitySet Name="WebTrapAlerts" EntityType="Self.WebTrapAlert" />
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DB_KenWorthModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DB_KenWorthModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_KenWorthModelStoreContainer" CdmEntityContainer="DB_KenWorthEntities">
+          <EntitySetMapping Name="Build_Table">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.Build_Table">
+              <MappingFragment StoreEntitySet="Build_Table">
+                <ScalarProperty Name="RecordNumber" ColumnName="RecordNumber" />
+                <ScalarProperty Name="BuildNo" ColumnName="BuildNo" />
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="Loc" ColumnName="Loc" />
+                <ScalarProperty Name="Desr" ColumnName="Desr" />
+                <ScalarProperty Name="Ex" ColumnName="Ex" />
+                <ScalarProperty Name="Variant" ColumnName="Variant" />
+                <ScalarProperty Name="Ind" ColumnName="Ind" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Drain_Data">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.Drain_Data">
+              <MappingFragment StoreEntitySet="Drain_Data">
+                <ScalarProperty Name="RecordNumber" ColumnName="RecordNumber" />
+                <ScalarProperty Name="DefectType_1" ColumnName="DefectType_1" />
+                <ScalarProperty Name="DefectType_2" ColumnName="DefectType_2" />
+                <ScalarProperty Name="DefectType_3" ColumnName="DefectType_3" />
+                <ScalarProperty Name="DefectType_4" ColumnName="DefectType_4" />
+                <ScalarProperty Name="DefectType_5" ColumnName="DefectType_5" />
+                <ScalarProperty Name="DefectType_6" ColumnName="DefectType_6" />
+                <ScalarProperty Name="DefectType_7" ColumnName="DefectType_7" />
+                <ScalarProperty Name="DefectType_8" ColumnName="DefectType_8" />
+                <ScalarProperty Name="DefectType_9" ColumnName="DefectType_9" />
+                <ScalarProperty Name="DefectType_10" ColumnName="DefectType_10" />
+                <ScalarProperty Name="DefectCatagory_1" ColumnName="DefectCatagory_1" />
+                <ScalarProperty Name="DefectCatagory_2" ColumnName="DefectCatagory_2" />
+                <ScalarProperty Name="DefectCatagory_3" ColumnName="DefectCatagory_3" />
+                <ScalarProperty Name="DefectCatagory_4" ColumnName="DefectCatagory_4" />
+                <ScalarProperty Name="DefectCatagory_5" ColumnName="DefectCatagory_5" />
+                <ScalarProperty Name="DefectCatagory_6" ColumnName="DefectCatagory_6" />
+                <ScalarProperty Name="DefectCatagory_7" ColumnName="DefectCatagory_7" />
+                <ScalarProperty Name="DefectCatagory_8" ColumnName="DefectCatagory_8" />
+                <ScalarProperty Name="DefectCatagory_9" ColumnName="DefectCatagory_9" />
+                <ScalarProperty Name="DefectCatagory_10" ColumnName="DefectCatagory_10" />
+                <ScalarProperty Name="X_Coordinate_1" ColumnName="X_Coordinate_1" />
+                <ScalarProperty Name="X_Coordinate_2" ColumnName="X_Coordinate_2" />
+                <ScalarProperty Name="X_Coordinate_3" ColumnName="X_Coordinate_3" />
+                <ScalarProperty Name="X_Coordinate_4" ColumnName="X_Coordinate_4" />
+                <ScalarProperty Name="X_Coordinate_5" ColumnName="X_Coordinate_5" />
+                <ScalarProperty Name="X_Coordinate_6" ColumnName="X_Coordinate_6" />
+                <ScalarProperty Name="X_Coordinate_7" ColumnName="X_Coordinate_7" />
+                <ScalarProperty Name="X_Coordinate_8" ColumnName="X_Coordinate_8" />
+                <ScalarProperty Name="X_Coordinate_9" ColumnName="X_Coordinate_9" />
+                <ScalarProperty Name="X_Coordinate_10" ColumnName="X_Coordinate_10" />
+                <ScalarProperty Name="Y_Coordinate_1" ColumnName="Y_Coordinate_1" />
+                <ScalarProperty Name="Y_Coordinate_2" ColumnName="Y_Coordinate_2" />
+                <ScalarProperty Name="Y_Coordinate_3" ColumnName="Y_Coordinate_3" />
+                <ScalarProperty Name="Y_Coordinate_4" ColumnName="Y_Coordinate_4" />
+                <ScalarProperty Name="Y_Coordinate_5" ColumnName="Y_Coordinate_5" />
+                <ScalarProperty Name="Y_Coordinate_6" ColumnName="Y_Coordinate_6" />
+                <ScalarProperty Name="Y_Coordinate_7" ColumnName="Y_Coordinate_7" />
+                <ScalarProperty Name="Y_Coordinate_8" ColumnName="Y_Coordinate_8" />
+                <ScalarProperty Name="Y_Coordinate_9" ColumnName="Y_Coordinate_9" />
+                <ScalarProperty Name="Y_Coordinate_10" ColumnName="Y_Coordinate_10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dtproperties">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.dtproperty">
+              <MappingFragment StoreEntitySet="dtproperty">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="objectid" ColumnName="objectid" />
+                <ScalarProperty Name="property" ColumnName="property" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+                <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+                <ScalarProperty Name="version" ColumnName="version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExemptCard_Card_Data">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.ExemptCard_Card_Data">
+              <MappingFragment StoreEntitySet="ExemptCard_Card_Data">
+                <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+                <ScalarProperty Name="SDate" ColumnName="SDate" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="LName" ColumnName="LName" />
+                <ScalarProperty Name="SAP" ColumnName="SAP" />
+                <ScalarProperty Name="Dept" ColumnName="Dept" />
+                <ScalarProperty Name="MON1_Date" ColumnName="MON1_Date" />
+                <ScalarProperty Name="MON1_2010" ColumnName="MON1_2010" />
+                <ScalarProperty Name="MON1_2004" ColumnName="MON1_2004" />
+                <ScalarProperty Name="MON1_2007" ColumnName="MON1_2007" />
+                <ScalarProperty Name="MON1_STD0" ColumnName="MON1_STD0" />
+                <ScalarProperty Name="MON1_STD2" ColumnName="MON1_STD2" />
+                <ScalarProperty Name="MON1_STDF" ColumnName="MON1_STDF" />
+                <ScalarProperty Name="MON1_2013" ColumnName="MON1_2013" />
+                <ScalarProperty Name="MON1_2016" ColumnName="MON1_2016" />
+                <ScalarProperty Name="MON1_2019" ColumnName="MON1_2019" />
+                <ScalarProperty Name="MON1_3005" ColumnName="MON1_3005" />
+                <ScalarProperty Name="MON1_MISC1" ColumnName="MON1_MISC1" />
+                <ScalarProperty Name="MON1_MISC2" ColumnName="MON1_MISC2" />
+                <ScalarProperty Name="MON1_MISC3" ColumnName="MON1_MISC3" />
+                <ScalarProperty Name="MON1_MISC4" ColumnName="MON1_MISC4" />
+                <ScalarProperty Name="MON1_MISC5" ColumnName="MON1_MISC5" />
+                <ScalarProperty Name="MON2_Date" ColumnName="MON2_Date" />
+                <ScalarProperty Name="MON2_2010" ColumnName="MON2_2010" />
+                <ScalarProperty Name="MON2_2004" ColumnName="MON2_2004" />
+                <ScalarProperty Name="MON2_2007" ColumnName="MON2_2007" />
+                <ScalarProperty Name="MON2_STD0" ColumnName="MON2_STD0" />
+                <ScalarProperty Name="MON2_STD2" ColumnName="MON2_STD2" />
+                <ScalarProperty Name="MON2_STDF" ColumnName="MON2_STDF" />
+                <ScalarProperty Name="MON2_2013" ColumnName="MON2_2013" />
+                <ScalarProperty Name="MON2_2016" ColumnName="MON2_2016" />
+                <ScalarProperty Name="MON2_2019" ColumnName="MON2_2019" />
+                <ScalarProperty Name="MON2_3005" ColumnName="MON2_3005" />
+                <ScalarProperty Name="MON2_MISC1" ColumnName="MON2_MISC1" />
+                <ScalarProperty Name="MON2_MISC2" ColumnName="MON2_MISC2" />
+                <ScalarProperty Name="MON2_MISC3" ColumnName="MON2_MISC3" />
+                <ScalarProperty Name="MON2_MISC4" ColumnName="MON2_MISC4" />
+                <ScalarProperty Name="MON2_MISC5" ColumnName="MON2_MISC5" />
+                <ScalarProperty Name="TUE1_Date" ColumnName="TUE1_Date" />
+                <ScalarProperty Name="TUE1_2010" ColumnName="TUE1_2010" />
+                <ScalarProperty Name="TUE1_2004" ColumnName="TUE1_2004" />
+                <ScalarProperty Name="TUE1_2007" ColumnName="TUE1_2007" />
+                <ScalarProperty Name="TUE1_STD0" ColumnName="TUE1_STD0" />
+                <ScalarProperty Name="TUE1_STD2" ColumnName="TUE1_STD2" />
+                <ScalarProperty Name="TUE1_STDF" ColumnName="TUE1_STDF" />
+                <ScalarProperty Name="TUE1_2013" ColumnName="TUE1_2013" />
+                <ScalarProperty Name="TUE1_2016" ColumnName="TUE1_2016" />
+                <ScalarProperty Name="TUE1_2019" ColumnName="TUE1_2019" />
+                <ScalarProperty Name="TUE1_3005" ColumnName="TUE1_3005" />
+                <ScalarProperty Name="TUE2_Date" ColumnName="TUE2_Date" />
+                <ScalarProperty Name="TUE2_2010" ColumnName="TUE2_2010" />
+                <ScalarProperty Name="TUE2_2004" ColumnName="TUE2_2004" />
+                <ScalarProperty Name="TUE2_2007" ColumnName="TUE2_2007" />
+                <ScalarProperty Name="TUE2_STD0" ColumnName="TUE2_STD0" />
+                <ScalarProperty Name="TUE2_STD2" ColumnName="TUE2_STD2" />
+                <ScalarProperty Name="TUE2_STDF" ColumnName="TUE2_STDF" />
+                <ScalarProperty Name="TUE2_2013" ColumnName="TUE2_2013" />
+                <ScalarProperty Name="TUE2_2016" ColumnName="TUE2_2016" />
+                <ScalarProperty Name="TUE2_2019" ColumnName="TUE2_2019" />
+                <ScalarProperty Name="TUE2_3005" ColumnName="TUE2_3005" />
+                <ScalarProperty Name="WED1_Date" ColumnName="WED1_Date" />
+                <ScalarProperty Name="WED1_2010" ColumnName="WED1_2010" />
+                <ScalarProperty Name="WED1_2004" ColumnName="WED1_2004" />
+                <ScalarProperty Name="WED1_2007" ColumnName="WED1_2007" />
+                <ScalarProperty Name="WED1_STD0" ColumnName="WED1_STD0" />
+                <ScalarProperty Name="WED1_STD2" ColumnName="WED1_STD2" />
+                <ScalarProperty Name="WED1_STDF" ColumnName="WED1_STDF" />
+                <ScalarProperty Name="WED1_2013" ColumnName="WED1_2013" />
+                <ScalarProperty Name="WED1_2016" ColumnName="WED1_2016" />
+                <ScalarProperty Name="WED1_2019" ColumnName="WED1_2019" />
+                <ScalarProperty Name="WED1_3005" ColumnName="WED1_3005" />
+                <ScalarProperty Name="WED2_Date" ColumnName="WED2_Date" />
+                <ScalarProperty Name="WED2_2010" ColumnName="WED2_2010" />
+                <ScalarProperty Name="WED2_2004" ColumnName="WED2_2004" />
+                <ScalarProperty Name="WED2_2007" ColumnName="WED2_2007" />
+                <ScalarProperty Name="WED2_STD0" ColumnName="WED2_STD0" />
+                <ScalarProperty Name="WED2_STD2" ColumnName="WED2_STD2" />
+                <ScalarProperty Name="WED2_STDF" ColumnName="WED2_STDF" />
+                <ScalarProperty Name="WED2_2013" ColumnName="WED2_2013" />
+                <ScalarProperty Name="WED2_2016" ColumnName="WED2_2016" />
+                <ScalarProperty Name="WED2_2019" ColumnName="WED2_2019" />
+                <ScalarProperty Name="WED2_3005" ColumnName="WED2_3005" />
+                <ScalarProperty Name="THU1_Date" ColumnName="THU1_Date" />
+                <ScalarProperty Name="THU1_2010" ColumnName="THU1_2010" />
+                <ScalarProperty Name="THU1_2004" ColumnName="THU1_2004" />
+                <ScalarProperty Name="THU1_2007" ColumnName="THU1_2007" />
+                <ScalarProperty Name="THU1_STD0" ColumnName="THU1_STD0" />
+                <ScalarProperty Name="THU1_STD2" ColumnName="THU1_STD2" />
+                <ScalarProperty Name="THU1_STDF" ColumnName="THU1_STDF" />
+                <ScalarProperty Name="THU1_2013" ColumnName="THU1_2013" />
+                <ScalarProperty Name="THU1_2016" ColumnName="THU1_2016" />
+                <ScalarProperty Name="THU1_2019" ColumnName="THU1_2019" />
+                <ScalarProperty Name="THU1_3005" ColumnName="THU1_3005" />
+                <ScalarProperty Name="THU2_Date" ColumnName="THU2_Date" />
+                <ScalarProperty Name="THU2_2010" ColumnName="THU2_2010" />
+                <ScalarProperty Name="THU2_2004" ColumnName="THU2_2004" />
+                <ScalarProperty Name="THU2_2007" ColumnName="THU2_2007" />
+                <ScalarProperty Name="THU2_STD0" ColumnName="THU2_STD0" />
+                <ScalarProperty Name="THU2_STD2" ColumnName="THU2_STD2" />
+                <ScalarProperty Name="THU2_STDF" ColumnName="THU2_STDF" />
+                <ScalarProperty Name="THU2_2013" ColumnName="THU2_2013" />
+                <ScalarProperty Name="THU2_2016" ColumnName="THU2_2016" />
+                <ScalarProperty Name="THU2_2019" ColumnName="THU2_2019" />
+                <ScalarProperty Name="THU2_3005" ColumnName="THU2_3005" />
+                <ScalarProperty Name="FRI1_Date" ColumnName="FRI1_Date" />
+                <ScalarProperty Name="FRI1_2010" ColumnName="FRI1_2010" />
+                <ScalarProperty Name="FRI1_2004" ColumnName="FRI1_2004" />
+                <ScalarProperty Name="FRI1_2007" ColumnName="FRI1_2007" />
+                <ScalarProperty Name="FRI1_STD0" ColumnName="FRI1_STD0" />
+                <ScalarProperty Name="FRI1_STD2" ColumnName="FRI1_STD2" />
+                <ScalarProperty Name="FRI1_STDF" ColumnName="FRI1_STDF" />
+                <ScalarProperty Name="FRI1_2013" ColumnName="FRI1_2013" />
+                <ScalarProperty Name="FRI1_2016" ColumnName="FRI1_2016" />
+                <ScalarProperty Name="FRI1_2019" ColumnName="FRI1_2019" />
+                <ScalarProperty Name="FRI1_3005" ColumnName="FRI1_3005" />
+                <ScalarProperty Name="FRI2_Date" ColumnName="FRI2_Date" />
+                <ScalarProperty Name="FRI2_2010" ColumnName="FRI2_2010" />
+                <ScalarProperty Name="FRI2_2004" ColumnName="FRI2_2004" />
+                <ScalarProperty Name="FRI2_2007" ColumnName="FRI2_2007" />
+                <ScalarProperty Name="FRI2_STD0" ColumnName="FRI2_STD0" />
+                <ScalarProperty Name="FRI2_STD2" ColumnName="FRI2_STD2" />
+                <ScalarProperty Name="FRI2_STDF" ColumnName="FRI2_STDF" />
+                <ScalarProperty Name="FRI2_2013" ColumnName="FRI2_2013" />
+                <ScalarProperty Name="FRI2_2016" ColumnName="FRI2_2016" />
+                <ScalarProperty Name="FRI2_2019" ColumnName="FRI2_2019" />
+                <ScalarProperty Name="FRI2_3005" ColumnName="FRI2_3005" />
+                <ScalarProperty Name="SAT1_Date" ColumnName="SAT1_Date" />
+                <ScalarProperty Name="SAT1_2010" ColumnName="SAT1_2010" />
+                <ScalarProperty Name="SAT1_2004" ColumnName="SAT1_2004" />
+                <ScalarProperty Name="SAT1_2007" ColumnName="SAT1_2007" />
+                <ScalarProperty Name="SAT1_STD0" ColumnName="SAT1_STD0" />
+                <ScalarProperty Name="SAT1_STD2" ColumnName="SAT1_STD2" />
+                <ScalarProperty Name="SAT1_STDF" ColumnName="SAT1_STDF" />
+                <ScalarProperty Name="SAT1_2013" ColumnName="SAT1_2013" />
+                <ScalarProperty Name="SAT1_2016" ColumnName="SAT1_2016" />
+                <ScalarProperty Name="SAT1_2019" ColumnName="SAT1_2019" />
+                <ScalarProperty Name="SAT1_3005" ColumnName="SAT1_3005" />
+                <ScalarProperty Name="SAT2_Date" ColumnName="SAT2_Date" />
+                <ScalarProperty Name="SAT2_2010" ColumnName="SAT2_2010" />
+                <ScalarProperty Name="SAT2_2004" ColumnName="SAT2_2004" />
+                <ScalarProperty Name="SAT2_2007" ColumnName="SAT2_2007" />
+                <ScalarProperty Name="SAT2_STD0" ColumnName="SAT2_STD0" />
+                <ScalarProperty Name="SAT2_STD2" ColumnName="SAT2_STD2" />
+                <ScalarProperty Name="SAT2_STDF" ColumnName="SAT2_STDF" />
+                <ScalarProperty Name="SAT2_2013" ColumnName="SAT2_2013" />
+                <ScalarProperty Name="SAT2_2016" ColumnName="SAT2_2016" />
+                <ScalarProperty Name="SAT2_2019" ColumnName="SAT2_2019" />
+                <ScalarProperty Name="SAT2_3005" ColumnName="SAT2_3005" />
+                <ScalarProperty Name="SUN1_Date" ColumnName="SUN1_Date" />
+                <ScalarProperty Name="SUN1_2010" ColumnName="SUN1_2010" />
+                <ScalarProperty Name="SUN1_2004" ColumnName="SUN1_2004" />
+                <ScalarProperty Name="SUN1_2007" ColumnName="SUN1_2007" />
+                <ScalarProperty Name="SUN1_STD0" ColumnName="SUN1_STD0" />
+                <ScalarProperty Name="SUN1_STD2" ColumnName="SUN1_STD2" />
+                <ScalarProperty Name="SUN1_STDF" ColumnName="SUN1_STDF" />
+                <ScalarProperty Name="SUN1_2013" ColumnName="SUN1_2013" />
+                <ScalarProperty Name="SUN1_2016" ColumnName="SUN1_2016" />
+                <ScalarProperty Name="SUN1_2019" ColumnName="SUN1_2019" />
+                <ScalarProperty Name="SUN1_3005" ColumnName="SUN1_3005" />
+                <ScalarProperty Name="SUN2_Date" ColumnName="SUN2_Date" />
+                <ScalarProperty Name="SUN2_2010" ColumnName="SUN2_2010" />
+                <ScalarProperty Name="SUN2_2004" ColumnName="SUN2_2004" />
+                <ScalarProperty Name="SUN2_2007" ColumnName="SUN2_2007" />
+                <ScalarProperty Name="SUN2_STD0" ColumnName="SUN2_STD0" />
+                <ScalarProperty Name="SUN2_STD2" ColumnName="SUN2_STD2" />
+                <ScalarProperty Name="SUN2_STDF" ColumnName="SUN2_STDF" />
+                <ScalarProperty Name="SUN2_2013" ColumnName="SUN2_2013" />
+                <ScalarProperty Name="SUN2_2016" ColumnName="SUN2_2016" />
+                <ScalarProperty Name="SUN2_2019" ColumnName="SUN2_2019" />
+                <ScalarProperty Name="SUN2_3005" ColumnName="SUN2_3005" />
+                <ScalarProperty Name="TUE1_MISC1" ColumnName="TUE1_MISC1" />
+                <ScalarProperty Name="TUE1_MISC2" ColumnName="TUE1_MISC2" />
+                <ScalarProperty Name="TUE1_MISC3" ColumnName="TUE1_MISC3" />
+                <ScalarProperty Name="TUE1_MISC4" ColumnName="TUE1_MISC4" />
+                <ScalarProperty Name="TUE1_MISC5" ColumnName="TUE1_MISC5" />
+                <ScalarProperty Name="TUE2_MISC1" ColumnName="TUE2_MISC1" />
+                <ScalarProperty Name="TUE2_MISC2" ColumnName="TUE2_MISC2" />
+                <ScalarProperty Name="TUE2_MISC3" ColumnName="TUE2_MISC3" />
+                <ScalarProperty Name="TUE2_MISC4" ColumnName="TUE2_MISC4" />
+                <ScalarProperty Name="TUE2_MISC5" ColumnName="TUE2_MISC5" />
+                <ScalarProperty Name="WED1_MISC1" ColumnName="WED1_MISC1" />
+                <ScalarProperty Name="WED1_MISC2" ColumnName="WED1_MISC2" />
+                <ScalarProperty Name="WED1_MISC3" ColumnName="WED1_MISC3" />
+                <ScalarProperty Name="WED1_MISC4" ColumnName="WED1_MISC4" />
+                <ScalarProperty Name="WED1_MISC5" ColumnName="WED1_MISC5" />
+                <ScalarProperty Name="WED2_MISC1" ColumnName="WED2_MISC1" />
+                <ScalarProperty Name="WED2_MISC2" ColumnName="WED2_MISC2" />
+                <ScalarProperty Name="WED2_MISC3" ColumnName="WED2_MISC3" />
+                <ScalarProperty Name="WED2_MISC4" ColumnName="WED2_MISC4" />
+                <ScalarProperty Name="WED2_MISC5" ColumnName="WED2_MISC5" />
+                <ScalarProperty Name="THU1_MISC1" ColumnName="THU1_MISC1" />
+                <ScalarProperty Name="THU1_MISC2" ColumnName="THU1_MISC2" />
+                <ScalarProperty Name="THU1_MISC3" ColumnName="THU1_MISC3" />
+                <ScalarProperty Name="THU1_MISC4" ColumnName="THU1_MISC4" />
+                <ScalarProperty Name="THU1_MISC5" ColumnName="THU1_MISC5" />
+                <ScalarProperty Name="THU2_MISC1" ColumnName="THU2_MISC1" />
+                <ScalarProperty Name="THU2_MISC2" ColumnName="THU2_MISC2" />
+                <ScalarProperty Name="THU2_MISC3" ColumnName="THU2_MISC3" />
+                <ScalarProperty Name="THU2_MISC4" ColumnName="THU2_MISC4" />
+                <ScalarProperty Name="THU2_MISC5" ColumnName="THU2_MISC5" />
+                <ScalarProperty Name="FRI1_MISC1" ColumnName="FRI1_MISC1" />
+                <ScalarProperty Name="FRI1_MISC2" ColumnName="FRI1_MISC2" />
+                <ScalarProperty Name="FRI1_MISC3" ColumnName="FRI1_MISC3" />
+                <ScalarProperty Name="FRI1_MISC4" ColumnName="FRI1_MISC4" />
+                <ScalarProperty Name="FRI1_MISC5" ColumnName="FRI1_MISC5" />
+                <ScalarProperty Name="FRI2_MISC1" ColumnName="FRI2_MISC1" />
+                <ScalarProperty Name="FRI2_MISC2" ColumnName="FRI2_MISC2" />
+                <ScalarProperty Name="FRI2_MISC3" ColumnName="FRI2_MISC3" />
+                <ScalarProperty Name="FRI2_MISC4" ColumnName="FRI2_MISC4" />
+                <ScalarProperty Name="FRI2_MISC5" ColumnName="FRI2_MISC5" />
+                <ScalarProperty Name="SAT1_MISC1" ColumnName="SAT1_MISC1" />
+                <ScalarProperty Name="SAT1_MISC2" ColumnName="SAT1_MISC2" />
+                <ScalarProperty Name="SAT1_MISC3" ColumnName="SAT1_MISC3" />
+                <ScalarProperty Name="SAT1_MISC4" ColumnName="SAT1_MISC4" />
+                <ScalarProperty Name="SAT1_MISC5" ColumnName="SAT1_MISC5" />
+                <ScalarProperty Name="SAT2_MISC1" ColumnName="SAT2_MISC1" />
+                <ScalarProperty Name="SAT2_MISC2" ColumnName="SAT2_MISC2" />
+                <ScalarProperty Name="SAT2_MISC3" ColumnName="SAT2_MISC3" />
+                <ScalarProperty Name="SAT2_MISC4" ColumnName="SAT2_MISC4" />
+                <ScalarProperty Name="SAT2_MISC5" ColumnName="SAT2_MISC5" />
+                <ScalarProperty Name="SUN1_MISC1" ColumnName="SUN1_MISC1" />
+                <ScalarProperty Name="SUN1_MISC2" ColumnName="SUN1_MISC2" />
+                <ScalarProperty Name="SUN1_MISC3" ColumnName="SUN1_MISC3" />
+                <ScalarProperty Name="SUN1_MISC4" ColumnName="SUN1_MISC4" />
+                <ScalarProperty Name="SUN1_MISC5" ColumnName="SUN1_MISC5" />
+                <ScalarProperty Name="SUN2_MISC1" ColumnName="SUN2_MISC1" />
+                <ScalarProperty Name="SUN2_MISC2" ColumnName="SUN2_MISC2" />
+                <ScalarProperty Name="SUN2_MISC3" ColumnName="SUN2_MISC3" />
+                <ScalarProperty Name="SUN2_MISC4" ColumnName="SUN2_MISC4" />
+                <ScalarProperty Name="SUN2_MISC5" ColumnName="SUN2_MISC5" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FillerNeck_Data">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.FillerNeck_Data">
+              <MappingFragment StoreEntitySet="FillerNeck_Data">
+                <ScalarProperty Name="RecordNumber" ColumnName="RecordNumber" />
+                <ScalarProperty Name="DefectType_1" ColumnName="DefectType_1" />
+                <ScalarProperty Name="DefectType_2" ColumnName="DefectType_2" />
+                <ScalarProperty Name="DefectType_3" ColumnName="DefectType_3" />
+                <ScalarProperty Name="DefectType_4" ColumnName="DefectType_4" />
+                <ScalarProperty Name="DefectType_5" ColumnName="DefectType_5" />
+                <ScalarProperty Name="DefectType_6" ColumnName="DefectType_6" />
+                <ScalarProperty Name="DefectType_7" ColumnName="DefectType_7" />
+                <ScalarProperty Name="DefectType_8" ColumnName="DefectType_8" />
+                <ScalarProperty Name="DefectType_9" ColumnName="DefectType_9" />
+                <ScalarProperty Name="DefectType_10" ColumnName="DefectType_10" />
+                <ScalarProperty Name="DefectCatagory_1" ColumnName="DefectCatagory_1" />
+                <ScalarProperty Name="DefectCatagory_2" ColumnName="DefectCatagory_2" />
+                <ScalarProperty Name="DefectCatagory_3" ColumnName="DefectCatagory_3" />
+                <ScalarProperty Name="DefectCatagory_4" ColumnName="DefectCatagory_4" />
+                <ScalarProperty Name="DefectCatagory_5" ColumnName="DefectCatagory_5" />
+                <ScalarProperty Name="DefectCatagory_6" ColumnName="DefectCatagory_6" />
+                <ScalarProperty Name="DefectCatagory_7" ColumnName="DefectCatagory_7" />
+                <ScalarProperty Name="DefectCatagory_8" ColumnName="DefectCatagory_8" />
+                <ScalarProperty Name="DefectCatagory_9" ColumnName="DefectCatagory_9" />
+                <ScalarProperty Name="DefectCatagory_10" ColumnName="DefectCatagory_10" />
+                <ScalarProperty Name="X_Coordinate_1" ColumnName="X_Coordinate_1" />
+                <ScalarProperty Name="X_Coordinate_2" ColumnName="X_Coordinate_2" />
+                <ScalarProperty Name="X_Coordinate_3" ColumnName="X_Coordinate_3" />
+                <ScalarProperty Name="X_Coordinate_4" ColumnName="X_Coordinate_4" />
+                <ScalarProperty Name="X_Coordinate_5" ColumnName="X_Coordinate_5" />
+                <ScalarProperty Name="X_Coordinate_6" ColumnName="X_Coordinate_6" />
+                <ScalarProperty Name="X_Coordinate_7" ColumnName="X_Coordinate_7" />
+                <ScalarProperty Name="X_Coordinate_8" ColumnName="X_Coordinate_8" />
+                <ScalarProperty Name="X_Coordinate_9" ColumnName="X_Coordinate_9" />
+                <ScalarProperty Name="X_Coordinate_10" ColumnName="X_Coordinate_10" />
+                <ScalarProperty Name="Y_Coordinate_1" ColumnName="Y_Coordinate_1" />
+                <ScalarProperty Name="Y_Coordinate_2" ColumnName="Y_Coordinate_2" />
+                <ScalarProperty Name="Y_Coordinate_3" ColumnName="Y_Coordinate_3" />
+                <ScalarProperty Name="Y_Coordinate_4" ColumnName="Y_Coordinate_4" />
+                <ScalarProperty Name="Y_Coordinate_5" ColumnName="Y_Coordinate_5" />
+                <ScalarProperty Name="Y_Coordinate_6" ColumnName="Y_Coordinate_6" />
+                <ScalarProperty Name="Y_Coordinate_7" ColumnName="Y_Coordinate_7" />
+                <ScalarProperty Name="Y_Coordinate_8" ColumnName="Y_Coordinate_8" />
+                <ScalarProperty Name="Y_Coordinate_9" ColumnName="Y_Coordinate_9" />
+                <ScalarProperty Name="Y_Coordinate_10" ColumnName="Y_Coordinate_10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FuelTankShipTrackings">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.FuelTankShipTracking">
+              <MappingFragment StoreEntitySet="FuelTankShipTracking">
+                <ScalarProperty Name="index_" ColumnName="index_" />
+                <ScalarProperty Name="PartNumber" ColumnName="PartNumber" />
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+                <ScalarProperty Name="ShippingScanDateTime" ColumnName="ShippingScanDateTime" />
+                <ScalarProperty Name="RifflesScanDateTime" ColumnName="RifflesScanDateTime" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HA_66a_LabelData">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.HA_66a_LabelData">
+              <MappingFragment StoreEntitySet="HA_66a_LabelData">
+                <ScalarProperty Name="RecordNo" ColumnName="RecordNo" />
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="FRAMESEQUENCENO" ColumnName="FRAMESEQUENCENO" />
+                <ScalarProperty Name="PARTNO" ColumnName="PARTNO" />
+                <ScalarProperty Name="PARTQTY" ColumnName="PARTQTY" />
+                <ScalarProperty Name="BILLOFMATERIALLINETXT" ColumnName="BILLOFMATERIALLINETXT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Heater_Data">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.Heater_Data">
+              <MappingFragment StoreEntitySet="Heater_Data">
+                <ScalarProperty Name="RecordNumber" ColumnName="RecordNumber" />
+                <ScalarProperty Name="DefectType_1" ColumnName="DefectType_1" />
+                <ScalarProperty Name="DefectType_2" ColumnName="DefectType_2" />
+                <ScalarProperty Name="DefectType_3" ColumnName="DefectType_3" />
+                <ScalarProperty Name="DefectType_4" ColumnName="DefectType_4" />
+                <ScalarProperty Name="DefectType_5" ColumnName="DefectType_5" />
+                <ScalarProperty Name="DefectType_6" ColumnName="DefectType_6" />
+                <ScalarProperty Name="DefectType_7" ColumnName="DefectType_7" />
+                <ScalarProperty Name="DefectType_8" ColumnName="DefectType_8" />
+                <ScalarProperty Name="DefectType_9" ColumnName="DefectType_9" />
+                <ScalarProperty Name="DefectType_10" ColumnName="DefectType_10" />
+                <ScalarProperty Name="DefectCatagory_1" ColumnName="DefectCatagory_1" />
+                <ScalarProperty Name="DefectCatagory_2" ColumnName="DefectCatagory_2" />
+                <ScalarProperty Name="DefectCatagory_3" ColumnName="DefectCatagory_3" />
+                <ScalarProperty Name="DefectCatagory_4" ColumnName="DefectCatagory_4" />
+                <ScalarProperty Name="DefectCatagory_5" ColumnName="DefectCatagory_5" />
+                <ScalarProperty Name="DefectCatagory_6" ColumnName="DefectCatagory_6" />
+                <ScalarProperty Name="DefectCatagory_7" ColumnName="DefectCatagory_7" />
+                <ScalarProperty Name="DefectCatagory_8" ColumnName="DefectCatagory_8" />
+                <ScalarProperty Name="DefectCatagory_9" ColumnName="DefectCatagory_9" />
+                <ScalarProperty Name="DefectCatagory_10" ColumnName="DefectCatagory_10" />
+                <ScalarProperty Name="X_Coordinate_1" ColumnName="X_Coordinate_1" />
+                <ScalarProperty Name="X_Coordinate_2" ColumnName="X_Coordinate_2" />
+                <ScalarProperty Name="X_Coordinate_3" ColumnName="X_Coordinate_3" />
+                <ScalarProperty Name="X_Coordinate_4" ColumnName="X_Coordinate_4" />
+                <ScalarProperty Name="X_Coordinate_5" ColumnName="X_Coordinate_5" />
+                <ScalarProperty Name="X_Coordinate_6" ColumnName="X_Coordinate_6" />
+                <ScalarProperty Name="X_Coordinate_7" ColumnName="X_Coordinate_7" />
+                <ScalarProperty Name="X_Coordinate_8" ColumnName="X_Coordinate_8" />
+                <ScalarProperty Name="X_Coordinate_9" ColumnName="X_Coordinate_9" />
+                <ScalarProperty Name="X_Coordinate_10" ColumnName="X_Coordinate_10" />
+                <ScalarProperty Name="Y_Coordinate_1" ColumnName="Y_Coordinate_1" />
+                <ScalarProperty Name="Y_Coordinate_2" ColumnName="Y_Coordinate_2" />
+                <ScalarProperty Name="Y_Coordinate_3" ColumnName="Y_Coordinate_3" />
+                <ScalarProperty Name="Y_Coordinate_4" ColumnName="Y_Coordinate_4" />
+                <ScalarProperty Name="Y_Coordinate_5" ColumnName="Y_Coordinate_5" />
+                <ScalarProperty Name="Y_Coordinate_6" ColumnName="Y_Coordinate_6" />
+                <ScalarProperty Name="Y_Coordinate_7" ColumnName="Y_Coordinate_7" />
+                <ScalarProperty Name="Y_Coordinate_8" ColumnName="Y_Coordinate_8" />
+                <ScalarProperty Name="Y_Coordinate_9" ColumnName="Y_Coordinate_9" />
+                <ScalarProperty Name="Y_Coordinate_10" ColumnName="Y_Coordinate_10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lable_Data">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.Lable_Data">
+              <MappingFragment StoreEntitySet="Lable_Data">
+                <ScalarProperty Name="RecordNumber" ColumnName="RecordNumber" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="SequenceNo" ColumnName="SequenceNo" />
+                <ScalarProperty Name="TankNo" ColumnName="TankNo" />
+                <ScalarProperty Name="PartNo_1" ColumnName="PartNo_1" />
+                <ScalarProperty Name="PartNo_2" ColumnName="PartNo_2" />
+                <ScalarProperty Name="PartNo_3" ColumnName="PartNo_3" />
+                <ScalarProperty Name="PartNo_4" ColumnName="PartNo_4" />
+                <ScalarProperty Name="PartNo_5" ColumnName="PartNo_5" />
+                <ScalarProperty Name="PartNo_6" ColumnName="PartNo_6" />
+                <ScalarProperty Name="PartNo_7" ColumnName="PartNo_7" />
+                <ScalarProperty Name="PartNo_8" ColumnName="PartNo_8" />
+                <ScalarProperty Name="PartNo_9" ColumnName="PartNo_9" />
+                <ScalarProperty Name="PartNo2_1" ColumnName="PartNo2_1" />
+                <ScalarProperty Name="PartNo2_2" ColumnName="PartNo2_2" />
+                <ScalarProperty Name="PartNo2_3" ColumnName="PartNo2_3" />
+                <ScalarProperty Name="PartNo2_4" ColumnName="PartNo2_4" />
+                <ScalarProperty Name="PartNo2_5" ColumnName="PartNo2_5" />
+                <ScalarProperty Name="PartNo2_6" ColumnName="PartNo2_6" />
+                <ScalarProperty Name="PartNo2_7" ColumnName="PartNo2_7" />
+                <ScalarProperty Name="PartNo2_8" ColumnName="PartNo2_8" />
+                <ScalarProperty Name="PartNo2_9" ColumnName="PartNo2_9" />
+                <ScalarProperty Name="SpecialMessage1" ColumnName="SpecialMessage1" />
+                <ScalarProperty Name="SpecialMessage2" ColumnName="SpecialMessage2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SendingUnit_Data">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.SendingUnit_Data">
+              <MappingFragment StoreEntitySet="SendingUnit_Data">
+                <ScalarProperty Name="RecordNumber" ColumnName="RecordNumber" />
+                <ScalarProperty Name="DefectType_1" ColumnName="DefectType_1" />
+                <ScalarProperty Name="DefectType_2" ColumnName="DefectType_2" />
+                <ScalarProperty Name="DefectType_3" ColumnName="DefectType_3" />
+                <ScalarProperty Name="DefectType_4" ColumnName="DefectType_4" />
+                <ScalarProperty Name="DefectType_5" ColumnName="DefectType_5" />
+                <ScalarProperty Name="DefectType_6" ColumnName="DefectType_6" />
+                <ScalarProperty Name="DefectType_7" ColumnName="DefectType_7" />
+                <ScalarProperty Name="DefectType_8" ColumnName="DefectType_8" />
+                <ScalarProperty Name="DefectType_9" ColumnName="DefectType_9" />
+                <ScalarProperty Name="DefectType_10" ColumnName="DefectType_10" />
+                <ScalarProperty Name="DefectCatagory_1" ColumnName="DefectCatagory_1" />
+                <ScalarProperty Name="DefectCatagory_2" ColumnName="DefectCatagory_2" />
+                <ScalarProperty Name="DefectCatagory_3" ColumnName="DefectCatagory_3" />
+                <ScalarProperty Name="DefectCatagory_4" ColumnName="DefectCatagory_4" />
+                <ScalarProperty Name="DefectCatagory_5" ColumnName="DefectCatagory_5" />
+                <ScalarProperty Name="DefectCatagory_6" ColumnName="DefectCatagory_6" />
+                <ScalarProperty Name="DefectCatagory_7" ColumnName="DefectCatagory_7" />
+                <ScalarProperty Name="DefectCatagory_8" ColumnName="DefectCatagory_8" />
+                <ScalarProperty Name="DefectCatagory_9" ColumnName="DefectCatagory_9" />
+                <ScalarProperty Name="DefectCatagory_10" ColumnName="DefectCatagory_10" />
+                <ScalarProperty Name="X_Coordinate_1" ColumnName="X_Coordinate_1" />
+                <ScalarProperty Name="X_Coordinate_2" ColumnName="X_Coordinate_2" />
+                <ScalarProperty Name="X_Coordinate_3" ColumnName="X_Coordinate_3" />
+                <ScalarProperty Name="X_Coordinate_4" ColumnName="X_Coordinate_4" />
+                <ScalarProperty Name="X_Coordinate_5" ColumnName="X_Coordinate_5" />
+                <ScalarProperty Name="X_Coordinate_6" ColumnName="X_Coordinate_6" />
+                <ScalarProperty Name="X_Coordinate_7" ColumnName="X_Coordinate_7" />
+                <ScalarProperty Name="X_Coordinate_8" ColumnName="X_Coordinate_8" />
+                <ScalarProperty Name="X_Coordinate_9" ColumnName="X_Coordinate_9" />
+                <ScalarProperty Name="X_Coordinate_10" ColumnName="X_Coordinate_10" />
+                <ScalarProperty Name="Y_Coordinate_1" ColumnName="Y_Coordinate_1" />
+                <ScalarProperty Name="Y_Coordinate_2" ColumnName="Y_Coordinate_2" />
+                <ScalarProperty Name="Y_Coordinate_3" ColumnName="Y_Coordinate_3" />
+                <ScalarProperty Name="Y_Coordinate_4" ColumnName="Y_Coordinate_4" />
+                <ScalarProperty Name="Y_Coordinate_5" ColumnName="Y_Coordinate_5" />
+                <ScalarProperty Name="Y_Coordinate_6" ColumnName="Y_Coordinate_6" />
+                <ScalarProperty Name="Y_Coordinate_7" ColumnName="Y_Coordinate_7" />
+                <ScalarProperty Name="Y_Coordinate_8" ColumnName="Y_Coordinate_8" />
+                <ScalarProperty Name="Y_Coordinate_9" ColumnName="Y_Coordinate_9" />
+                <ScalarProperty Name="Y_Coordinate_10" ColumnName="Y_Coordinate_10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TankFront_Data">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.TankFront_Data">
+              <MappingFragment StoreEntitySet="TankFront_Data">
+                <ScalarProperty Name="RecordNumber" ColumnName="RecordNumber" />
+                <ScalarProperty Name="DefectType_1" ColumnName="DefectType_1" />
+                <ScalarProperty Name="DefectType_2" ColumnName="DefectType_2" />
+                <ScalarProperty Name="DefectType_3" ColumnName="DefectType_3" />
+                <ScalarProperty Name="DefectType_4" ColumnName="DefectType_4" />
+                <ScalarProperty Name="DefectType_5" ColumnName="DefectType_5" />
+                <ScalarProperty Name="DefectType_6" ColumnName="DefectType_6" />
+                <ScalarProperty Name="DefectType_7" ColumnName="DefectType_7" />
+                <ScalarProperty Name="DefectType_8" ColumnName="DefectType_8" />
+                <ScalarProperty Name="DefectType_9" ColumnName="DefectType_9" />
+                <ScalarProperty Name="DefectType_10" ColumnName="DefectType_10" />
+                <ScalarProperty Name="DefectCatagory_1" ColumnName="DefectCatagory_1" />
+                <ScalarProperty Name="DefectCatagory_2" ColumnName="DefectCatagory_2" />
+                <ScalarProperty Name="DefectCatagory_3" ColumnName="DefectCatagory_3" />
+                <ScalarProperty Name="DefectCatagory_4" ColumnName="DefectCatagory_4" />
+                <ScalarProperty Name="DefectCatagory_5" ColumnName="DefectCatagory_5" />
+                <ScalarProperty Name="DefectCatagory_6" ColumnName="DefectCatagory_6" />
+                <ScalarProperty Name="DefectCatagory_7" ColumnName="DefectCatagory_7" />
+                <ScalarProperty Name="DefectCatagory_8" ColumnName="DefectCatagory_8" />
+                <ScalarProperty Name="DefectCatagory_9" ColumnName="DefectCatagory_9" />
+                <ScalarProperty Name="DefectCatagory_10" ColumnName="DefectCatagory_10" />
+                <ScalarProperty Name="X_Coordinate_1" ColumnName="X_Coordinate_1" />
+                <ScalarProperty Name="X_Coordinate_2" ColumnName="X_Coordinate_2" />
+                <ScalarProperty Name="X_Coordinate_3" ColumnName="X_Coordinate_3" />
+                <ScalarProperty Name="X_Coordinate_4" ColumnName="X_Coordinate_4" />
+                <ScalarProperty Name="X_Coordinate_5" ColumnName="X_Coordinate_5" />
+                <ScalarProperty Name="X_Coordinate_6" ColumnName="X_Coordinate_6" />
+                <ScalarProperty Name="X_Coordinate_7" ColumnName="X_Coordinate_7" />
+                <ScalarProperty Name="X_Coordinate_8" ColumnName="X_Coordinate_8" />
+                <ScalarProperty Name="X_Coordinate_9" ColumnName="X_Coordinate_9" />
+                <ScalarProperty Name="X_Coordinate_10" ColumnName="X_Coordinate_10" />
+                <ScalarProperty Name="Y_Coordinate_1" ColumnName="Y_Coordinate_1" />
+                <ScalarProperty Name="Y_Coordinate_2" ColumnName="Y_Coordinate_2" />
+                <ScalarProperty Name="Y_Coordinate_3" ColumnName="Y_Coordinate_3" />
+                <ScalarProperty Name="Y_Coordinate_4" ColumnName="Y_Coordinate_4" />
+                <ScalarProperty Name="Y_Coordinate_5" ColumnName="Y_Coordinate_5" />
+                <ScalarProperty Name="Y_Coordinate_6" ColumnName="Y_Coordinate_6" />
+                <ScalarProperty Name="Y_Coordinate_7" ColumnName="Y_Coordinate_7" />
+                <ScalarProperty Name="Y_Coordinate_8" ColumnName="Y_Coordinate_8" />
+                <ScalarProperty Name="Y_Coordinate_9" ColumnName="Y_Coordinate_9" />
+                <ScalarProperty Name="Y_Coordinate_10" ColumnName="Y_Coordinate_10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TankRear_Data">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.TankRear_Data">
+              <MappingFragment StoreEntitySet="TankRear_Data">
+                <ScalarProperty Name="Build_Table" ColumnName="Build_Table" />
+                <ScalarProperty Name="DefectType_1" ColumnName="DefectType_1" />
+                <ScalarProperty Name="DefectType_2" ColumnName="DefectType_2" />
+                <ScalarProperty Name="DefectType_3" ColumnName="DefectType_3" />
+                <ScalarProperty Name="DefectType_4" ColumnName="DefectType_4" />
+                <ScalarProperty Name="DefectType_5" ColumnName="DefectType_5" />
+                <ScalarProperty Name="DefectType_6" ColumnName="DefectType_6" />
+                <ScalarProperty Name="DefectType_7" ColumnName="DefectType_7" />
+                <ScalarProperty Name="DefectType_8" ColumnName="DefectType_8" />
+                <ScalarProperty Name="DefectType_9" ColumnName="DefectType_9" />
+                <ScalarProperty Name="DefectType_10" ColumnName="DefectType_10" />
+                <ScalarProperty Name="DefectCatagory_1" ColumnName="DefectCatagory_1" />
+                <ScalarProperty Name="DefectCatagory_2" ColumnName="DefectCatagory_2" />
+                <ScalarProperty Name="DefectCatagory_3" ColumnName="DefectCatagory_3" />
+                <ScalarProperty Name="DefectCatagory_4" ColumnName="DefectCatagory_4" />
+                <ScalarProperty Name="DefectCatagory_5" ColumnName="DefectCatagory_5" />
+                <ScalarProperty Name="DefectCatagory_6" ColumnName="DefectCatagory_6" />
+                <ScalarProperty Name="DefectCatagory_7" ColumnName="DefectCatagory_7" />
+                <ScalarProperty Name="DefectCatagory_8" ColumnName="DefectCatagory_8" />
+                <ScalarProperty Name="DefectCatagory_9" ColumnName="DefectCatagory_9" />
+                <ScalarProperty Name="DefectCatagory_10" ColumnName="DefectCatagory_10" />
+                <ScalarProperty Name="X_Coordinate_1" ColumnName="X_Coordinate_1" />
+                <ScalarProperty Name="X_Coordinate_2" ColumnName="X_Coordinate_2" />
+                <ScalarProperty Name="X_Coordinate_3" ColumnName="X_Coordinate_3" />
+                <ScalarProperty Name="X_Coordinate_4" ColumnName="X_Coordinate_4" />
+                <ScalarProperty Name="X_Coordinate_5" ColumnName="X_Coordinate_5" />
+                <ScalarProperty Name="X_Coordinate_6" ColumnName="X_Coordinate_6" />
+                <ScalarProperty Name="X_Coordinate_7" ColumnName="X_Coordinate_7" />
+                <ScalarProperty Name="X_Coordinate_8" ColumnName="X_Coordinate_8" />
+                <ScalarProperty Name="X_Coordinate_9" ColumnName="X_Coordinate_9" />
+                <ScalarProperty Name="X_Coordinate_10" ColumnName="X_Coordinate_10" />
+                <ScalarProperty Name="Y_Coordinate_1" ColumnName="Y_Coordinate_1" />
+                <ScalarProperty Name="Y_Coordinate_2" ColumnName="Y_Coordinate_2" />
+                <ScalarProperty Name="Y_Coordinate_3" ColumnName="Y_Coordinate_3" />
+                <ScalarProperty Name="Y_Coordinate_4" ColumnName="Y_Coordinate_4" />
+                <ScalarProperty Name="Y_Coordinate_5" ColumnName="Y_Coordinate_5" />
+                <ScalarProperty Name="Y_Coordinate_6" ColumnName="Y_Coordinate_6" />
+                <ScalarProperty Name="Y_Coordinate_7" ColumnName="Y_Coordinate_7" />
+                <ScalarProperty Name="Y_Coordinate_8" ColumnName="Y_Coordinate_8" />
+                <ScalarProperty Name="Y_Coordinate_9" ColumnName="Y_Coordinate_9" />
+                <ScalarProperty Name="Y_Coordinate_10" ColumnName="Y_Coordinate_10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TankTransaction_Data">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.TankTransaction_Data">
+              <MappingFragment StoreEntitySet="TankTransaction_Data">
+                <ScalarProperty Name="RecordNumber" ColumnName="RecordNumber" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="TankNumber" ColumnName="TankNumber" />
+                <ScalarProperty Name="SequenceNumber" ColumnName="SequenceNumber" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="Robot" ColumnName="Robot" />
+                <ScalarProperty Name="TankSize" ColumnName="TankSize" />
+                <ScalarProperty Name="StationNumber" ColumnName="StationNumber" />
+                <ScalarProperty Name="DrainLocation" ColumnName="DrainLocation" />
+                <ScalarProperty Name="RepairTotal" ColumnName="RepairTotal" />
+                <ScalarProperty Name="ScrapTotal" ColumnName="ScrapTotal" />
+                <ScalarProperty Name="LeakerTotal" ColumnName="LeakerTotal" />
+                <ScalarProperty Name="ScratchTotal" ColumnName="ScratchTotal" />
+                <ScalarProperty Name="Repairs_Total" ColumnName="Repairs_Total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ToughTruckStartViews">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.ToughTruckStartView">
+              <MappingFragment StoreEntitySet="ToughTruckStartView">
+                <ScalarProperty Name="PartNumber" ColumnName="PartNumber" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="pl" ColumnName="pl" />
+                <ScalarProperty Name="QTYOnHand" ColumnName="QTYOnHand" />
+                <ScalarProperty Name="QTYOnOrder" ColumnName="QTYOnOrder" />
+                <ScalarProperty Name="TotalREQ" ColumnName="TotalREQ" />
+                <ScalarProperty Name="TQTY" ColumnName="TQTY" />
+                <ScalarProperty Name="STL_CLS" ColumnName="STL_CLS" />
+                <ScalarProperty Name="SR_TY" ColumnName="SR_TY" />
+                <ScalarProperty Name="iclass" ColumnName="iclass" />
+                <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+                <ScalarProperty Name="seq" ColumnName="seq" />
+                <ScalarProperty Name="chassis" ColumnName="chassis" />
+                <ScalarProperty Name="bmcd" ColumnName="bmcd" />
+                <ScalarProperty Name="suppl" ColumnName="suppl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="uvw_EXT_RESOURCE_ChassisInProcess">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.uvw_EXT_RESOURCE_ChassisInProcess">
+              <MappingFragment StoreEntitySet="uvw_EXT_RESOURCE_ChassisInProcess">
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="FrameSequenceNo" ColumnName="FrameSequenceNo" />
+                <ScalarProperty Name="CabSequenceNo" ColumnName="CabSequenceNo" />
+                <ScalarProperty Name="Major_Component" ColumnName="Major_Component" />
+                <ScalarProperty Name="Line_Location" ColumnName="Line_Location" />
+                <ScalarProperty Name="Location_Name" ColumnName="Location_Name" />
+                <ScalarProperty Name="Location_Number" ColumnName="Location_Number" />
+                <ScalarProperty Name="MajorComponentTypeCd" ColumnName="MajorComponentTypeCd" />
+                <ScalarProperty Name="AssemblyLineNo" ColumnName="AssemblyLineNo" />
+                <ScalarProperty Name="AssemblyLineLocationNo" ColumnName="AssemblyLineLocationNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vent_Data">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.Vent_Data">
+              <MappingFragment StoreEntitySet="Vent_Data">
+                <ScalarProperty Name="RecordNumber" ColumnName="RecordNumber" />
+                <ScalarProperty Name="DefectType_1" ColumnName="DefectType_1" />
+                <ScalarProperty Name="DefectType_2" ColumnName="DefectType_2" />
+                <ScalarProperty Name="DefectType_3" ColumnName="DefectType_3" />
+                <ScalarProperty Name="DefectType_4" ColumnName="DefectType_4" />
+                <ScalarProperty Name="DefectType_5" ColumnName="DefectType_5" />
+                <ScalarProperty Name="DefectType_6" ColumnName="DefectType_6" />
+                <ScalarProperty Name="DefectType_7" ColumnName="DefectType_7" />
+                <ScalarProperty Name="DefectType_8" ColumnName="DefectType_8" />
+                <ScalarProperty Name="DefectType_9" ColumnName="DefectType_9" />
+                <ScalarProperty Name="DefectType_10" ColumnName="DefectType_10" />
+                <ScalarProperty Name="DefectCatagory_1" ColumnName="DefectCatagory_1" />
+                <ScalarProperty Name="DefectCatagory_2" ColumnName="DefectCatagory_2" />
+                <ScalarProperty Name="DefectCatagory_3" ColumnName="DefectCatagory_3" />
+                <ScalarProperty Name="DefectCatagory_4" ColumnName="DefectCatagory_4" />
+                <ScalarProperty Name="DefectCatagory_5" ColumnName="DefectCatagory_5" />
+                <ScalarProperty Name="DefectCatagory_6" ColumnName="DefectCatagory_6" />
+                <ScalarProperty Name="DefectCatagory_7" ColumnName="DefectCatagory_7" />
+                <ScalarProperty Name="DefectCatagory_8" ColumnName="DefectCatagory_8" />
+                <ScalarProperty Name="DefectCatagory_9" ColumnName="DefectCatagory_9" />
+                <ScalarProperty Name="DefectCatagory_10" ColumnName="DefectCatagory_10" />
+                <ScalarProperty Name="X_Coordinate_1" ColumnName="X_Coordinate_1" />
+                <ScalarProperty Name="X_Coordinate_2" ColumnName="X_Coordinate_2" />
+                <ScalarProperty Name="X_Coordinate_3" ColumnName="X_Coordinate_3" />
+                <ScalarProperty Name="X_Coordinate_4" ColumnName="X_Coordinate_4" />
+                <ScalarProperty Name="X_Coordinate_5" ColumnName="X_Coordinate_5" />
+                <ScalarProperty Name="X_Coordinate_6" ColumnName="X_Coordinate_6" />
+                <ScalarProperty Name="X_Coordinate_7" ColumnName="X_Coordinate_7" />
+                <ScalarProperty Name="X_Coordinate_8" ColumnName="X_Coordinate_8" />
+                <ScalarProperty Name="X_Coordinate_9" ColumnName="X_Coordinate_9" />
+                <ScalarProperty Name="X_Coordinate_10" ColumnName="X_Coordinate_10" />
+                <ScalarProperty Name="Y_Coordinate_1" ColumnName="Y_Coordinate_1" />
+                <ScalarProperty Name="Y_Coordinate_2" ColumnName="Y_Coordinate_2" />
+                <ScalarProperty Name="Y_Coordinate_3" ColumnName="Y_Coordinate_3" />
+                <ScalarProperty Name="Y_Coordinate_4" ColumnName="Y_Coordinate_4" />
+                <ScalarProperty Name="Y_Coordinate_5" ColumnName="Y_Coordinate_5" />
+                <ScalarProperty Name="Y_Coordinate_6" ColumnName="Y_Coordinate_6" />
+                <ScalarProperty Name="Y_Coordinate_7" ColumnName="Y_Coordinate_7" />
+                <ScalarProperty Name="Y_Coordinate_8" ColumnName="Y_Coordinate_8" />
+                <ScalarProperty Name="Y_Coordinate_9" ColumnName="Y_Coordinate_9" />
+                <ScalarProperty Name="Y_Coordinate_10" ColumnName="Y_Coordinate_10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_ChassisInProcess">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.vw_ChassisInProcess">
+              <MappingFragment StoreEntitySet="vw_ChassisInProcess">
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="DealerTruckPurchaseOrderYr" ColumnName="DealerTruckPurchaseOrderYr" />
+                <ScalarProperty Name="DivisionCd" ColumnName="DivisionCd" />
+                <ScalarProperty Name="SiteCd" ColumnName="SiteCd" />
+                <ScalarProperty Name="Major_Component" ColumnName="Major_Component" />
+                <ScalarProperty Name="Line_Location" ColumnName="Line_Location" />
+                <ScalarProperty Name="Location_Name" ColumnName="Location_Name" />
+                <ScalarProperty Name="Location_Number" ColumnName="Location_Number" />
+                <ScalarProperty Name="MajorComponentTypeCd" ColumnName="MajorComponentTypeCd" />
+                <ScalarProperty Name="AssemblyLineNo" ColumnName="AssemblyLineNo" />
+                <ScalarProperty Name="AssemblyLineLocationNo" ColumnName="AssemblyLineLocationNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_ChassisSequenceList">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.vw_ChassisSequenceList">
+              <MappingFragment StoreEntitySet="vw_ChassisSequenceList">
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="FrameSequenceNo" ColumnName="FrameSequenceNo" />
+                <ScalarProperty Name="DealerTruckPurchaseOrderYr" ColumnName="DealerTruckPurchaseOrderYr" />
+                <ScalarProperty Name="DivisionCd" ColumnName="DivisionCd" />
+                <ScalarProperty Name="SiteCd" ColumnName="SiteCd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_FTBuildTableImport">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.vw_FTBuildTableImport">
+              <MappingFragment StoreEntitySet="vw_FTBuildTableImport">
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="FrameSequenceNo" ColumnName="FrameSequenceNo" />
+                <ScalarProperty Name="BuildStationNo" ColumnName="BuildStationNo" />
+                <ScalarProperty Name="BillOfMaterialCd" ColumnName="BillOfMaterialCd" />
+                <ScalarProperty Name="BillOfMaterialLineCd" ColumnName="BillOfMaterialLineCd" />
+                <ScalarProperty Name="BillOfMaterialLineTxt" ColumnName="BillOfMaterialLineTxt" />
+                <ScalarProperty Name="BillOfMaterialLineTypeCd" ColumnName="BillOfMaterialLineTypeCd" />
+                <ScalarProperty Name="PARTNO" ColumnName="PARTNO" />
+                <ScalarProperty Name="PARTQTY" ColumnName="PARTQTY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_FTWDashboard_LineData">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.vw_FTWDashboard_LineData">
+              <MappingFragment StoreEntitySet="vw_FTWDashboard_LineData">
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="FrameSequenceNo" ColumnName="FrameSequenceNo" />
+                <ScalarProperty Name="PARTNO" ColumnName="PARTNO" />
+                <ScalarProperty Name="Location_Number" ColumnName="Location_Number" />
+                <ScalarProperty Name="AssemblyLineLocationNo" ColumnName="AssemblyLineLocationNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_FTWDashboard_PartData">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.vw_FTWDashboard_PartData">
+              <MappingFragment StoreEntitySet="vw_FTWDashboard_PartData">
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="FrameSequenceNo" ColumnName="FrameSequenceNo" />
+                <ScalarProperty Name="PARTNO" ColumnName="PARTNO" />
+                <ScalarProperty Name="FirmScheduleDt" ColumnName="FirmScheduleDt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_FuelTankLineSchedulingView">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.vw_FuelTankLineSchedulingView">
+              <MappingFragment StoreEntitySet="vw_FuelTankLineSchedulingView">
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="FrameSequenceNo" ColumnName="FrameSequenceNo" />
+                <ScalarProperty Name="Location_Name" ColumnName="Location_Name" />
+                <ScalarProperty Name="AssemblyLineNo" ColumnName="AssemblyLineNo" />
+                <ScalarProperty Name="AssemblyLineLocationNo" ColumnName="AssemblyLineLocationNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_SchedulingProgramRunLine">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.vw_SchedulingProgramRunLine">
+              <MappingFragment StoreEntitySet="vw_SchedulingProgramRunLine">
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="FrameSequenceNo" ColumnName="FrameSequenceNo" />
+                <ScalarProperty Name="Location_Name" ColumnName="Location_Name" />
+                <ScalarProperty Name="AssemblyLineNo" ColumnName="AssemblyLineNo" />
+                <ScalarProperty Name="AssemblyLineLocationNo" ColumnName="AssemblyLineLocationNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_SchedulingProgramTankList">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.vw_SchedulingProgramTankList">
+              <MappingFragment StoreEntitySet="vw_SchedulingProgramTankList">
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="FrameSequenceNo" ColumnName="FrameSequenceNo" />
+                <ScalarProperty Name="AssemblyLineNo" ColumnName="AssemblyLineNo" />
+                <ScalarProperty Name="AssemblyLineLocationNo" ColumnName="AssemblyLineLocationNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_tbChassisBillOfMaterials">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.vw_tbChassisBillOfMaterials">
+              <MappingFragment StoreEntitySet="vw_tbChassisBillOfMaterials">
+                <ScalarProperty Name="BillOfMaterialCd" ColumnName="BillOfMaterialCd" />
+                <ScalarProperty Name="PARTNO" ColumnName="PARTNO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_TreadleValveReport">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.vw_TreadleValveReport">
+              <MappingFragment StoreEntitySet="vw_TreadleValveReport">
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="FrameSequenceNo" ColumnName="FrameSequenceNo" />
+                <ScalarProperty Name="PARTNO" ColumnName="PARTNO" />
+                <ScalarProperty Name="BillOfMaterialLineTxt" ColumnName="BillOfMaterialLineTxt" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WebTrapAlerts">
+            <EntityTypeMapping TypeName="DB_KenWorthModel.WebTrapAlert">
+              <MappingFragment StoreEntitySet="WebTrapAlert">
+                <ScalarProperty Name="index_" ColumnName="index_" />
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+                <ScalarProperty Name="AlertTime" ColumnName="AlertTime" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DB_KenWorthModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DB_KenWorthModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DB_KenWorthModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DB_KenWorthModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_KenWorthModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DB_KenWorthModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_KenWorthModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DB_KenWorthModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DB_KenWorthModel.Store.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
